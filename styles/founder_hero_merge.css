@@ -1,0 +1,245 @@
+/* Update Hero Layout for Founder Merge */
+.hero-visual {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.founder-hero-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-founder-img {
+    width: 90%;
+    height: 100%;
+    object-fit: contain;
+    /* Arch Portal Shape */
+    border-radius: 200px 200px 20px 20px;
+    clip-path: none;
+    /* Reset previous cut */
+
+    /* Elegant Glass/Neon Border */
+    border: 2px solid rgba(0, 255, 157, 0.5);
+    box-shadow:
+        0 0 30px rgba(0, 255, 157, 0.2),
+        inset 0 0 20px rgba(0, 255, 157, 0.1);
+
+    z-index: 2;
+    transition: all 0.5s ease;
+    background: linear-gradient(to bottom, rgba(0, 255, 157, 0.05), transparent);
+}
+
+.hero-founder-img:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 10px 40px rgba(157, 0, 255, 0.4),
+        inset 0 0 30px rgba(0, 255, 157, 0.2);
+    border-color: var(--accent);
+}
+
+.tech-circle {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 255, 157, 0.3);
+    border-left-color: transparent;
+    border-right-color: transparent;
+    z-index: 1;
+    animation: spinButton 20s linear infinite;
+    box-shadow: 0 0 30px rgba(0, 255, 157, 0.1);
+}
+
+.tech-circle::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--primary);
+}
+
+@keyframes spinButton {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* NEW DESIGN: Holographic HUD Card */
+.hero-info-card {
+    background: rgba(5, 10, 20, 0.8);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 255, 157, 0.3);
+    padding: 30px;
+    border-radius: 4px;
+    /* More angular for HUD look */
+    margin-bottom: 30px;
+    margin-top: 20px;
+    max-width: 90%;
+    position: relative;
+    box-shadow: 0 0 30px rgba(0, 255, 157, 0.1);
+    clip-path: polygon(20px 0, 100% 0,
+            100% calc(100% - 20px), calc(100% - 20px) 100%,
+            0 100%, 0 20px);
+    /* Sci-fi corner cut looks */
+}
+
+/* HUD Decorative Corners */
+.hud-corner-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-top: 3px solid var(--primary);
+    border-left: 3px solid var(--primary);
+}
+
+.hud-corner-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border-bottom: 3px solid var(--primary);
+    border-right: 3px solid var(--primary);
+}
+
+.info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-info-card .highlight-text {
+    font-size: 1.1rem;
+    color: var(--primary);
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
+}
+
+/* Glitch Effect on Hover */
+.glitch-text {
+    position: relative;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-dark);
+}
+
+.glitch-text::before {
+    left: 2px;
+    text-shadow: -1px 0 #ff00c1;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.glitch-text::after {
+    left: -2px;
+    text-shadow: -1px 0 #00fff9;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim2 5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+    0% {
+        clip: rect(10px, 9999px, 30px, 0);
+    }
+
+    100% {
+        clip: rect(80px, 9999px, 100px, 0);
+    }
+}
+
+@keyframes glitch-anim2 {
+    0% {
+        clip: rect(60px, 9999px, 80px, 0);
+    }
+
+    100% {
+        clip: rect(10px, 9999px, 20px, 0);
+    }
+}
+
+.hero-info-card .founder-sig {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 2rem;
+    color: var(--accent);
+    margin: 0;
+    transform: rotate(-5deg);
+    text-shadow: 0 0 10px rgba(157, 0, 255, 0.6);
+}
+
+.founder-details {
+    margin-bottom: 15px;
+}
+
+.founder-role {
+    display: inline-block;
+    background: rgba(0, 255, 157, 0.1);
+    color: var(--primary);
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid rgba(0, 255, 157, 0.2);
+}
+
+.founder-quote {
+    font-size: 1.1rem !important;
+    font-style: normal !important;
+    margin-bottom: 0 !important;
+    color: #e0e0e0 !important;
+    line-height: 1.6;
+    font-family: 'Courier New', monospace;
+    /* Tech feel */
+    border-left: 2px solid var(--text-muted);
+    padding-left: 15px;
+}
+
+@media (max-width: 900px) {
+    .hero-visual {
+        width: 100%;
+        height: 400px;
+        order: -1;
+    }
+
+    .hero-founder-img {
+        width: 80%;
+    }
+
+    .tech-circle {
+        width: 300px;
+        height: 300px;
+    }
+}
