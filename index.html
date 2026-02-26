@@ -2,179 +2,720 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JJ TECH | Agencia de Software & IA</title>
-    <meta name="description"
-        content="Automatización, Desarrollo Web, Chatbots IA y Sistemas POS para potenciar tu empresa.">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JJ TECH | Portafolio de Software & Automatización</title>
+  <meta name="description"
+    content="JJ TECH — Agencia de software premium. Desarrollo web, e-commerce, apps empresariales, chatbots IA e inventarios POS. Pereira, Colombia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
 
-    <nav class="navbar">
-        <div class="logo">JJ <span class="highlight">TECH</span></div>
-        <ul class="nav-links">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#clientes">Clientes</a></li>
-            <!-- Fundador link moved/removed -->
-            <li><a href="#contacto" class="btn-nav">Contactar</a></li>
-        </ul>
-        <div class="menu-toggle">
-            <i class="fas fa-bars"></i>
+  <!-- ===== LOADER ===== -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">JJ<span>TECH</span></div>
+      <div class="loader-bar">
+        <div class="loader-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CURSOR ===== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="nav-logo">JJ <span>TECH</span></a>
+      <ul class="nav-links" id="navMenu">
+        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+        <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+        <li><a href="#servicios" class="nav-link">Servicios</a></li>
+        <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+        <li><a href="#contacto" class="nav-link cta-link">
+            <i class="fas fa-fire"></i> Cotizar Ahora
+          </a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="inicio" class="hero">
+    <canvas id="particles-canvas"></canvas>
+    <div class="hero-glow glow-1"></div>
+    <div class="hero-glow glow-2"></div>
+    <div class="hero-glow glow-3"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Disponible para nuevos proyectos
+      </div>
+      <h1 class="hero-title">
+        Construimos el<br>
+        <span class="hero-gradient">Software que Vende</span>
+        <span class="hero-cursor">|</span>
+      </h1>
+      <p class="hero-subtitle">
+        Desde tiendas online que convierten hasta sistemas de inventario en tiempo real —
+        cada línea de código que escribimos es un activo digital que trabaja para tu negocio.
+      </p>
+      <div class="hero-actions">
+        <a href="#contacto" class="btn btn-primary">
+          <i class="fas fa-rocket"></i>
+          Quiero mi Proyecto
+        </a>
+        <a href="#proyectos" class="btn btn-ghost">
+          <i class="fas fa-eye"></i>
+          Ver Portafolio
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="stat-num" data-target="9">0</span>
+          <span class="stat-label">Proyectos Live</span>
         </div>
-    </nav>
-
-    <header id="inicio" class="hero">
-        <div class="hero-content">
-            <h1>Impulsa tu imperio con <span class="gradient-text">JJ TECH</span></h1>
-            <p>Desarrollo Web, Chatbots con IA, Inventarios POS y Automatización para empresas que miran al futuro.</p>
-            <div class="hero-info-card">
-                <div class="hud-corner-top"></div>
-                <div class="info-header">
-                    <span class="highlight-text glitch-text" data-text="CONOCE AL CEREBRO">CONOCE AL CEREBRO</span>
-                    <div class="founder-sig">JJ</div>
-                </div>
-                <div class="founder-details">
-                    <span class="founder-role">Juan J. // CEO & Lead Developer</span>
-                </div>
-                <p class="founder-quote">"En JJ TECH no solo escribimos código, creamos activos digitales que ponen
-                    dinero en tu bolsillo. La tecnología debe ser rentable, no un adorno."</p>
-                <div class="hud-corner-bottom"></div>
-            </div>
-            <div class="hero-btns">
-                <a href="#contacto" class="btn primary">Cotizar Proyecto</a>
-                <a href="#servicios" class="btn secondary">Ver Servicios</a>
-            </div>
+        <div class="stat-divider"></div>
+        <div class="hero-stat">
+          <span class="stat-num" data-target="5">0</span>
+          <span class="stat-label">Clientes Activos</span>
         </div>
-        <div class="hero-visual">
-            <div class="founder-hero-wrapper">
-                <img src="images/founder.png" alt="Juan J. CEO" class="hero-founder-img">
-                <div class="tech-circle"></div>
-            </div>
+        <div class="stat-divider"></div>
+        <div class="hero-stat">
+          <span class="stat-num" data-target="100">0</span>
+          <span class="stat-label">% Satisfacción</span>
         </div>
-    </header>
-
-    <section id="servicios" class="services">
-        <div class="container">
-            <h2 class="section-title">Nuestras Soluciones</h2>
-            <p class="section-subtitle">Tecnología de punta para ahorrar dinero y maximizar eficiencia.</p>
-
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="icon-box"><i class="fas fa-laptop-code"></i></div>
-                    <h3>Páginas Web Premium</h3>
-                    <p>Sitios web ultrarrápidos, diseñados para vender. Desde landing pages hasta e-commerce completos.
-                    </p>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box"><i class="fas fa-cash-register"></i></div>
-                    <h3>Inventarios & POS</h3>
-                    <p>Sistemas de punto de venta e inventario a medida. Control total de tu stock y ventas en tiempo
-                        real.</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box"><i class="fas fa-robot"></i></div>
-                    <h3>Chatbots con IA</h3>
-                    <p>Atención al cliente 24/7. Bots inteligentes que responden dudas y cierran ventas automáticamente.
-                    </p>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box"><i class="fas fa-headset"></i></div>
-                    <h3>Llamadas de Bots</h3>
-                    <p>Agentes de voz automatizados para confirmar citas, encuestas o cobranzas. Ahorra costos
-                        operativos.</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box"><i class="fas fa-chart-line"></i></div>
-                    <h3>Apps Empresariales</h3>
-                    <p>Aplicaciones para optimizar procesos internos, mejorar falencias y digitalizar tu operación.</p>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box"><i class="fas fa-coins"></i></div>
-                    <h3>Ahorro Inteligente</h3>
-                    <p>Detectamos fugas de dinero y las tapamos con eficiencia digital y automatización.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="clientes" class="clients">
-        <div class="container">
-            <h2 class="section-title">Resultados que Hablan</h2>
-            <p class="section-subtitle">Empresas que ya han optimizado sus costos y procesos.</p>
-
-            <div class="stats-container">
-                <div class="stat-item">
-                    <span class="stat-number" data-target="200">0</span>
-                    <span class="stat-label">Clientes Felices</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="50">0</span>
-                    <span class="stat-label">Millones Ahorrados</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="15000">0</span>
-                    <span class="stat-label">Horas Automatizadas</span>
-                </div>
-            </div>
-
-            <!-- Marquee removed as requested -->
-        </div>
-    </section>
-
-    <!-- Founder section merged into Hero -->
-
-    <section id="contacto" class="contact">
-        <div class="container">
-            <!-- Old voice trigger removed -->
-
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h2>Hablemos de tu Proyecto</h2>
-                    <p>¿Listo para llevar tu empresa al siguiente nivel? Escríbenos.</p>
-                    <ul>
-                        <li><i class="fas fa-envelope"></i> juanjosecolorado266@gmail.com</li>
-                        <li><i class="fas fa-phone"></i> +57 317 100 8880</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Pereira, Risaralda</li>
-                    </ul>
-                </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Tu Nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Tu Correo" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="¿En qué podemos ayudarte?" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn primary">Enviar Mensaje</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 JJ TECH. Todos los derechos reservados.</p>
-    </footer>
-
-    <!-- Floating AI Assistant -->
-    <div id="ai-assistant-container" class="floating-ai">
-        <div class="ai-bubble">¿Necesitas ayuda? ¡Hablemos!</div>
-        <div class="ai-avatar-wrapper">
-            <div class="ai-pulse"></div>
-            <img src="images/bot_avatar_transparent.png" alt="JJ AI" id="start-assistant">
-        </div>
+      </div>
     </div>
 
-    <script src="scripts/main.js"></script>
-    <script src="scripts/voice_assistant.js"></script>
+    <div class="hero-visual">
+      <!-- FOUNDER PHOTO -->
+      <div class="founder-wrap">
+        <div class="founder-ring"></div>
+        <div class="founder-ring ring-2"></div>
+        <img src="images/founder.png" alt="Juan J. — CEO JJ TECH" class="founder-photo">
+        <div class="founder-chip">
+          <span class="badge-dot"></span>
+          CEO &amp; Lead Developer
+        </div>
+      </div>
+      <!-- CODE WINDOW -->
+      <div class="code-window">
+        <div class="code-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="code-title">jjtech.dev</span>
+        </div>
+        <div class="code-body">
+          <div class="code-line"><span class="c-keyword">const</span> <span class="c-var">negocio</span> = <span
+              class="c-string">"tuEmpresa"</span>;</div>
+          <div class="code-line"><span class="c-keyword">const</span> <span class="c-var">solución</span> = <span
+              class="c-func">JJTech</span>.<span class="c-method">build</span>({</div>
+          <div class="code-line indent"><span class="c-prop">web</span>: <span class="c-bool">true</span>,</div>
+          <div class="code-line indent"><span class="c-prop">ecommerce</span>: <span class="c-bool">true</span>,</div>
+          <div class="code-line indent"><span class="c-prop">ia</span>: <span class="c-bool">true</span>,</div>
+          <div class="code-line indent"><span class="c-prop">pos</span>: <span class="c-bool">true</span>,</div>
+          <div class="code-line">});</div>
+          <div class="code-line">&nbsp;</div>
+          <div class="code-line typing-line"><span class="c-comment">// Resultado: 💰 Ventas que escalan</span><span
+              class="type-cursor">▌</span></div>
+        </div>
+      </div>
+      <div class="floating-card card-1">
+        <i class="fas fa-chart-line"></i>
+        <div>
+          <strong>+340%</strong>
+          <small>Ventas online</small>
+        </div>
+      </div>
+      <div class="floating-card card-2">
+        <i class="fas fa-fire"></i>
+        <div>
+          <strong>9 proyectos</strong>
+          <small>En producción</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- ===== TICKER BAND ===== -->
+  <div class="ticker-band">
+    <div class="ticker-track">
+      <span>⚡ E-Commerce</span><span>•</span>
+      <span>🤖 Chatbots IA</span><span>•</span>
+      <span>📊 Dashboards</span><span>•</span>
+      <span>💳 Sistemas POS</span><span>•</span>
+      <span>📱 PWA Apps</span><span>•</span>
+      <span>🚚 Logística</span><span>•</span>
+      <span>🛒 Tiendas Online</span><span>•</span>
+      <span>📡 APIs REST</span><span>•</span>
+      <span>⚡ E-Commerce</span><span>•</span>
+      <span>🤖 Chatbots IA</span><span>•</span>
+      <span>📊 Dashboards</span><span>•</span>
+      <span>💳 Sistemas POS</span><span>•</span>
+      <span>📱 PWA Apps</span><span>•</span>
+      <span>🚚 Logística</span><span>•</span>
+      <span>🛒 Tiendas Online</span><span>•</span>
+      <span>📡 APIs REST</span>
+    </div>
+  </div>
+
+  <!-- ===== PROYECTOS ===== -->
+  <section id="proyectos" class="projects-section">
+    <div class="section-header reveal">
+      <div class="section-tag">Portafolio Real</div>
+      <h2 class="section-title">Proyectos <span class="gradient-text">En Vivo</span></h2>
+      <p class="section-sub">Estos no son mockups — son sistemas reales funcionando para clientes reales.</p>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- TENNISYMAS -->
+      <div class="project-card reveal" data-demo="https://tennisymas.com/" data-tag="E-Commerce Deportivo">
+        <div class="card-glow"></div>
+        <div class="card-badge">🏆 E-Commerce Activo</div>
+        <div class="card-icon-wrap" style="--icon-color:#ff3333">
+          <i class="fas fa-shoe-prints"></i>
+        </div>
+        <div class="card-content">
+          <h3>Tennis Y Más</h3>
+          <p>E-commerce de alto rendimiento. Diseñado con una arquitectura ultra rápida, catálogo dinámico optimizado
+            para SEO y un flujo de checkout sin fricciones que maximiza las tasas de conversión.</p>
+          <div class="card-tech">
+            <span>Next.js</span><span>React</span><span>Checkout</span><span>Premium URL</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-demo" onclick="openDemo('https://tennisymas.com/', 'Tennis Y Mas')">
+            <i class="fas fa-play"></i> Ver Demo
+          </button>
+          <a href="#contacto" class="btn-quote">Quiero uno igual</a>
+        </div>
+      </div>
+
+      <!-- SHOPPIC -->
+      <div class="project-card reveal" data-tag="E-Commerce Variedades">
+        <div class="card-glow"></div>
+        <div class="card-badge">🛍️ Tienda Online Activa</div>
+        <div class="card-icon-wrap" style="--icon-color:#f59e0b">
+          <i class="fas fa-store"></i>
+        </div>
+        <div class="card-content">
+          <h3>Shoppic Variedades</h3>
+          <p>Plataforma retail escalable. Integra gestión de inventario masivo en tiempo real, sistema inteligente de
+            carrito de compras y pasarela de pagos B2C de alta recurrencia.</p>
+          <div class="card-tech">
+            <span>React</span><span>Supabase</span><span>E-Commerce</span><span>Vercel Deploy</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-demo" onclick="openDemo('https://shoppicvariedades.vercel.app/', 'Shoppic Variedades')">
+            <i class="fas fa-play"></i> Ver Demo
+          </button>
+          <a href="#contacto" class="btn-quote">Quiero uno igual</a>
+        </div>
+      </div>
+
+      <!-- MG NAILS -->
+      <div class="project-card reveal" data-tag="App Gestión SPA">
+        <div class="card-glow"></div>
+        <div class="card-badge">💅 Sistema Global — París, FR</div>
+        <div class="card-icon-wrap" style="--icon-color:#ff85a1">
+          <i class="fas fa-spa"></i>
+        </div>
+        <div class="card-content">
+          <h3>MG Nails Paris</h3>
+          <p>Plataforma integral SaaS para gestión de salones de belleza internacionales. Centraliza el control de
+            agendas, análisis financiero y métricas de rendimiento en una PWA multi-dispositivo.</p>
+          <div class="card-tech">
+            <span>PWA</span><span>Supabase</span><span>Chart.js</span><span>Vercel Deploy</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-demo" onclick="openDemo('https://mgnailsparis.vercel.app/', 'MG Nails Paris', true)">
+            <i class="fas fa-play"></i> Ver Demo
+          </button>
+          <a href="#contacto" class="btn-quote">Quiero uno igual</a>
+        </div>
+      </div>
+
+      <!-- AGENDA STUDIO -->
+      <div class="project-card reveal" data-tag="PWA Citas">
+        <div class="card-glow"></div>
+        <div class="card-badge">📅 SaaS Agendamiento</div>
+        <div class="card-icon-wrap" style="--icon-color:#c084fc">
+          <i class="fas fa-calendar-check"></i>
+        </div>
+        <div class="card-content">
+          <h3>Agenda Spa</h3>
+          <p>SaaS de agendamiento corporativo con sincronización en tiempo real. Incluye control de personal,
+            notificaciones push automatizadas y arquitectura 'Offline-First' para disponibilidad garantizada.</p>
+          <div class="card-tech">
+            <span>React</span><span>Supabase</span><span>Service Worker</span><span>PWA</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-demo" onclick="openDemo('https://agendaaspa.vercel.app/', 'Agenda ASPA', true)">
+            <i class="fas fa-play"></i> Ver Demo
+          </button>
+          <a href="#contacto" class="btn-quote">Quiero uno igual</a>
+        </div>
+      </div>
+
+      <!-- FLETESAPP -->
+      <div class="project-card reveal" data-tag="Sistema Logístico">
+        <div class="card-glow"></div>
+        <div class="card-badge">🚚 Infraestructura Empresarial</div>
+        <div class="card-icon-wrap" style="--icon-color:#34d399">
+          <i class="fas fa-truck-fast"></i>
+        </div>
+        <div class="card-content">
+          <h3>Enterprise Fletes</h3>
+          <p>Núcleo de inteligencia logística para carga pesada. Desarrollado con un motor algorítmico de cotización,
+            dashboards interactivos B2B y seguridad de grado bancario (RLS).</p>
+          <div class="card-tech">
+            <span>Dashboards</span><span>Supabase RLS</span><span>Logistics</span><span>PostgreSQL</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-demo"
+            onclick="openDemo('https://fletes.tiendasymarcaseje.com/', 'Enterprise Fletes', true)">
+            <i class="fas fa-play"></i> Ver Demo
+          </button>
+          <a href="#contacto" class="btn-quote">Quiero uno igual</a>
+        </div>
+      </div>
+
+      <!-- INVENTARIO TM -->
+      <div class="project-card reveal" data-tag="POS e Inventario">
+        <div class="card-glow"></div>
+        <div class="card-badge">📦 Cloud ERP & POS</div>
+        <div class="card-icon-wrap" style="--icon-color:#60a5fa">
+          <i class="fas fa-boxes-stacked"></i>
+        </div>
+        <div class="card-content">
+          <h3>Inventario & POS Cloud</h3>
+          <p>Potente ERP en la nube para franquicias multi-sede. Sincronización de stock en milisegundos, análisis
+            predictivo de rotación de inventario y módulo de Punto de Venta (POS) de facturación masiva.</p>
+          <div class="card-tech">
+            <span>Cloud Sync</span><span>Supabase</span><span>Chart.js</span><span>PWA</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-demo" onclick="openDemo('https://inventario.tennisymas.com/', 'Core Inventario', true)">
+            <i class="fas fa-play"></i> Ver Demo
+          </button>
+          <a href="#contacto" class="btn-quote">Quiero uno igual</a>
+        </div>
+      </div>
+
+      <!-- ZENTRA -->
+      <div class="project-card reveal" data-tag="Infraestructura B2B">
+        <div class="card-glow"></div>
+        <div class="card-badge">⚡ Core Plataforma Nacional</div>
+        <div class="card-icon-wrap" style="--icon-color:#0070f3">
+          <i class="fas fa-server"></i>
+        </div>
+        <div class="card-content">
+          <h3>Zentra Dashboard de Indicadores</h3>
+          <p>Plataforma analítica B2B para visualización KPI. Consolida métricas de facturación electrónica y operativos
+            a través de una red de comercios, garantizando una fiabilidad del 99.9%.</p>
+          <div class="card-tech">
+            <span>React</span><span>Supabase</span><span>Dashboard</span><span>Enterprise</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-demo" onclick="openDemo('https://zentra.tiendasymarcaseje.com/', 'Zentra Core', true)">
+            <i class="fas fa-play"></i> Ver Demo
+          </button>
+          <a href="#contacto" class="btn-quote">Quiero uno igual</a>
+        </div>
+      </div>
+
+      <!-- TYM MAIN E-COMMERCE -->
+      <div class="project-card reveal" data-tag="E-Commerce Retail">
+        <div class="card-glow"></div>
+        <div class="card-badge">🛍️ Retail Nacional Activo</div>
+        <div class="card-icon-wrap" style="--icon-color:#f97316">
+          <i class="fas fa-shopping-bag"></i>
+        </div>
+        <div class="card-content">
+          <h3>Web Empresarial</h3>
+          <p>Portal bandera de e-commerce retail (Tiendas y Marcas Eje). Arquitectura orientada a la conversión masiva,
+            infraestructura CDN
+            para tiempos de carga instantáneos y experiencia de usuario diseñada para maximizar ventas.</p>
+          <div class="card-tech">
+            <span>E-Commerce</span><span>SEO Optmized</span><span>Analytics</span><span>Fast Load</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-demo" onclick="openDemo('https://www.tiendasymarcaseje.com/', 'TYM E-Commerce')">
+            <i class="fas fa-play"></i> Ver Demo
+          </button>
+          <a href="#contacto" class="btn-quote">Quiero uno igual</a>
+        </div>
+      </div>
+
+      <!-- TYM DEVOLUCIONES -->
+      <div class="project-card reveal" data-tag="Portal Interno">
+        <div class="card-glow"></div>
+        <div class="card-badge">🔄 Workflow Empresarial</div>
+        <div class="card-icon-wrap" style="--icon-color:#eab308">
+          <i class="fas fa-exchange-alt"></i>
+        </div>
+        <div class="card-content">
+          <h3>Portal de Devoluciones</h3>
+          <p>Sistema corporativo para la automatización del ciclo de retornos y garantías. Reduce drásticamente la
+            fricción en servicio al cliente mediante flujos autogestionados y notificaciones en tiempo real.</p>
+          <div class="card-tech">
+            <span>Workflow</span><span>Automations</span><span>Admin Panel</span><span>CRM</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-demo"
+            onclick="openDemo('https://devoluciones.tiendasymarcaseje.com/', 'TYM Returns', true)">
+            <i class="fas fa-play"></i> Ver Demo
+          </button>
+          <a href="#contacto" class="btn-quote">Quiero uno igual</a>
+        </div>
+      </div>
+
+      <!-- VIRTUAL RPM -->
+      <div class="project-card reveal" data-tag="Visor Interactivo">
+        <div class="card-glow"></div>
+        <div class="card-badge">🌐 Experiencia Web-App</div>
+        <div class="card-icon-wrap" style="--icon-color:#22c55e">
+          <i class="fas fa-globe"></i>
+        </div>
+        <div class="card-content">
+          <h3>Virtual RPM Portal</h3>
+          <p>Aplicación web dinámica desplegada en infraestructura Edge Cloud. Arquitectura modular de última generación
+            que ofrece tiempos de respuesta mínimos y un diseño centrado en el usuario final.</p>
+          <div class="card-tech">
+            <span>Vite</span><span>React</span><span>Vercel</span><span>Cloud Edge</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-demo" onclick="openDemo('http://virtualrpm.vercel.app/', 'Virtual RPM')">
+            <i class="fas fa-play"></i> Ver Demo
+          </button>
+          <a href="#contacto" class="btn-quote">Quiero uno igual</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== SERVICIOS ===== -->
+  <section id="servicios" class="services-section">
+    <div class="services-bg-grid"></div>
+    <div class="section-header reveal">
+      <div class="section-tag">¿Qué Hacemos?</div>
+      <h2 class="section-title">Nuestras <span class="gradient-text">Soluciones</span></h2>
+      <p class="section-sub">Tecnología rentable. Cada producto que creamos genera retorno de inversión.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+        <h3>E-Commerce Premium</h3>
+        <p>Tiendas online que convierten visitantes en clientes. Catálogo dinámico, carrito, checkout WhatsApp/PSE y
+          panel admin.</p>
+        <div class="service-price">Desde <strong>$800K COP</strong></div>
+        <a href="#contacto" class="service-cta">Cotizar <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-cash-register"></i></div>
+        <h3>Inventario & POS</h3>
+        <p>Control total de tu stock en tiempo real. Multi-sede, buscador inteligente, ventas, entradas y reportes de
+          análisis.</p>
+        <div class="service-price">Desde <strong>$600K COP</strong></div>
+        <a href="#contacto" class="service-cta">Cotizar <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-calendar-alt"></i></div>
+        <h3>Apps de Gestión</h3>
+        <p>Sistemas de agendamiento, control de ingresos y gestión de empleados. PWA instalable como app nativa en
+          móvil.</p>
+        <div class="service-price">Desde <strong>$500K COP</strong></div>
+        <a href="#contacto" class="service-cta">Cotizar <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-robot"></i></div>
+        <h3>Chatbots con IA</h3>
+        <p>Asistentes inteligentes que atienden tus clientes 24/7, responden dudas y cierran ventas de forma autónoma.
+        </p>
+        <div class="service-price">Desde <strong>$700K COP</strong></div>
+        <a href="#contacto" class="service-cta">Cotizar <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Dashboards & KPIs</h3>
+        <p>Paneles de inteligencia de negocio con gráficas en tiempo real, filtros avanzados y sincronización automática
+          de datos.</p>
+        <div class="service-price">Desde <strong>$900K COP</strong></div>
+        <a href="#contacto" class="service-cta">Cotizar <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-truck-fast"></i></div>
+        <h3>Apps Empresariales</h3>
+        <p>Sistemas a medida para logística, agricultura, control de fletes, reportes PDF y seguridad de grado bancario.
+        </p>
+        <div class="service-price">Desde <strong>$1.2M COP</strong></div>
+        <a href="#contacto" class="service-cta">Cotizar <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NOSOTROS ===== -->
+  <section id="nosotros" class="about-section">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="about-card-main">
+          <div class="about-avatar">JJ</div>
+          <div>
+            <h3>Juan J.</h3>
+            <p>CEO & Lead Developer</p>
+          </div>
+          <div class="about-badge-online"><span></span> Disponible</div>
+        </div>
+        <div class="about-floating-stat stat-a reveal">
+          <i class="fas fa-code-branch"></i>
+          <div><strong>9</strong> <small>Proyectos</small></div>
+        </div>
+        <div class="about-floating-stat stat-b reveal">
+          <i class="fas fa-bolt"></i>
+          <div><strong>&lt;3s</strong> <small>Load Time</small></div>
+        </div>
+        <div class="about-tech-grid reveal">
+          <span>JavaScript</span><span>React</span><span>Django</span>
+          <span>Supabase</span><span>PostgreSQL</span><span>CSS3</span>
+        </div>
+      </div>
+      <div class="about-content reveal">
+        <div class="section-tag">El Cerebro</div>
+        <h2 class="section-title">Tecnología que<br><span class="gradient-text">Genera Dinero</span></h2>
+        <p class="about-desc">En JJ TECH no hacemos webs de adorno. Cada sistema que construimos tiene un objetivo:
+          <strong>hacer que tu empresa venda más, gaste menos y opere con eficiencia.</strong>
+        </p>
+        <p class="about-desc">Con base en Pereira, Colombia, hemos construido ecosistemas digitales para tiendas
+          físicas, negocios de belleza, distribuidoras logísticas y agricultores. Tecnología de startup para PyMEs.</p>
+        <div class="about-values">
+          <div class="value-item">
+            <i class="fas fa-check-circle"></i>
+            <span>Entrega en tiempo récord</span>
+          </div>
+          <div class="value-item">
+            <i class="fas fa-check-circle"></i>
+            <span>Código limpio y escalable</span>
+          </div>
+          <div class="value-item">
+            <i class="fas fa-check-circle"></i>
+            <span>Soporte post-entrega incluido</span>
+          </div>
+          <div class="value-item">
+            <i class="fas fa-check-circle"></i>
+            <span>Arquitectura Serverless (zero ops)</span>
+          </div>
+        </div>
+        <a href="#contacto" class="btn btn-primary">
+          <i class="fas fa-comments"></i>
+          Hablemos de tu Proyecto
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIAL BAND ===== -->
+  <div class="testimonial-band reveal">
+    <div class="quote-mark">"</div>
+    <p class="testimonial-text">En JJ TECH no solo escribimos código, creamos activos digitales que ponen dinero en tu
+      bolsillo. La tecnología debe ser rentable, no un adorno.</p>
+    <div class="testimonial-author">— Juan J., CEO & Lead Developer, JJ TECH</div>
+  </div>
+
+  <!-- ===== CONTACTO / COTIZACIÓN ===== -->
+  <section id="contacto" class="contact-section">
+    <div class="contact-bg-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+    </div>
+    <div class="contact-wrapper">
+      <div class="contact-info reveal">
+        <div class="section-tag">Trabaja con Nosotros</div>
+        <h2 class="section-title">¿Listo para el<br><span class="gradient-text">siguiente nivel?</span></h2>
+        <p>Cuéntanos tu idea. Te respondemos en menos de 2 horas con una propuesta real, sin burocracia.</p>
+
+        <div class="contact-channels">
+          <a href="https://wa.me/573171008880?text=Hola%20JJ%20TECH!%20Quiero%20cotizar%20un%20proyecto" target="_blank"
+            class="channel-card channel-wa">
+            <i class="fab fa-whatsapp"></i>
+            <div>
+              <strong>WhatsApp Directo</strong>
+              <small>+57 317 100 8880</small>
+            </div>
+            <i class="fas fa-arrow-right channel-arrow"></i>
+          </a>
+          <a href="mailto:juanjosecolorado266@gmail.com" class="channel-card channel-mail">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <strong>Email</strong>
+              <small>juanjosecolorado266@gmail.com</small>
+            </div>
+            <i class="fas fa-arrow-right channel-arrow"></i>
+          </a>
+          <div class="channel-card channel-location">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong>Ubicación</strong>
+              <small>Pereira, Risaralda, Colombia</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote-form-wrap reveal">
+        <div class="quote-form-card">
+          <div class="form-header">
+            <h3>Cotiza tu Proyecto</h3>
+            <p>Rellena el formulario y te enviamos la propuesta por WhatsApp.</p>
+          </div>
+          <form id="quoteForm" class="quote-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="q-name">Tu Nombre</label>
+                <input type="text" id="q-name" placeholder="Ej: Carlos Rincón" required>
+              </div>
+              <div class="form-group">
+                <label for="q-business">Nombre del Negocio</label>
+                <input type="text" id="q-business" placeholder="Ej: Deportes Total">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="q-phone">WhatsApp / Teléfono</label>
+              <input type="tel" id="q-phone" placeholder="Ej: 3201234567" required>
+            </div>
+            <div class="form-group">
+              <label for="q-service">¿Qué necesitas?</label>
+              <select id="q-service" required>
+                <option value="" disabled selected>Selecciona un servicio...</option>
+                <option value="E-Commerce / Tienda Online">🛍️ E-Commerce / Tienda Online</option>
+                <option value="Inventario y POS">📦 Inventario y POS</option>
+                <option value="App de Gestión / Agendamiento">📅 App de Gestión / Agendamiento</option>
+                <option value="Dashboard Empresarial KPIs">📊 Dashboard Empresarial KPIs</option>
+                <option value="Chatbot con IA">🤖 Chatbot con IA</option>
+                <option value="App Empresarial a Medida">⚙️ App Empresarial a Medida</option>
+                <option value="No sé, quiero asesoría">💬 No sé, quiero asesoría gratis</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="q-desc">Cuéntanos tu idea</label>
+              <textarea id="q-desc" rows="4"
+                placeholder="¿Qué problema quieres resolver? ¿Qué debe hacer tu app? Cualquier detalle ayuda..."
+                required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="q-budget">Presupuesto aproximado</label>
+              <select id="q-budget">
+                <option value="" disabled selected>Selecciona un rango...</option>
+                <option value="Menos de $500K COP">Menos de $500K COP</option>
+                <option value="$500K - $1M COP">$500K — $1M COP</option>
+                <option value="$1M - $3M COP">$1M — $3M COP</option>
+                <option value="Más de $3M COP">Más de $3M COP</option>
+                <option value="No sé, quiero orientación">No sé, quiero orientación</option>
+              </select>
+            </div>
+            <button type="submit" id="submitQuote" class="btn btn-primary btn-full">
+              <i class="fab fa-whatsapp"></i>
+              Enviar por WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">JJ <span>TECH</span></div>
+        <p>Construimos el software que hace crecer tu negocio.</p>
+      </div>
+      <div class="footer-links-group">
+        <h4>Navegación</h4>
+        <a href="#inicio">Inicio</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div class="footer-links-group">
+        <h4>Contacto</h4>
+        <a href="https://wa.me/573171008880" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="mailto:juanjosecolorado266@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+        <span><i class="fas fa-map-marker-alt"></i> Pereira, Colombia</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 JJ TECH. Todos los derechos reservados.</p>
+      <p>Hecho con ❤️ en Pereira, Risaralda.</p>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING WHATSAPP ===== -->
+  <a href="https://wa.me/573171008880?text=Hola%20JJ%20TECH!%20Vi%20su%20portafolio%20y%20quiero%20cotizar"
+    target="_blank" class="wa-float" id="waFloat">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-pulse"></span>
+  </a>
+
+  <!-- ===== DEMO MODAL ===== -->
+  <div class="demo-modal" id="demoModal">
+    <div class="demo-modal-inner">
+      <div class="demo-modal-header">
+        <div class="demo-modal-title" id="demoTitle">Demo</div>
+        <div class="demo-modal-actions">
+          <a href="#contacto" class="demo-cta" onclick="closeDemo()">
+            <i class="fas fa-fire"></i> Quiero uno igual
+          </a>
+          <button class="demo-close" onclick="closeDemo()">
+            <i class="fas fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+      <div class="demo-modal-body">
+        <div class="demo-loading" id="demoLoading">
+          <div class="demo-spinner"></div>
+          <p>Cargando demo...</p>
+        </div>
+        <iframe id="demoIframe" src="" title="Demo del proyecto"
+          sandbox="allow-scripts allow-same-origin allow-forms allow-popups" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TOAST ===== -->
+  <div id="toast" class="toast"></div>
+
+  <script src="scripts/main.js"></script>
 </body>
 
 </html>
