@@ -1,18 +1,9 @@
-/* =====================================================
-   JJ TECH — Main JavaScript v3.0
-   ===================================================== */
-'use strict';
-
-/* =========================================
-   LOADER
-   ========================================= */
 window.addEventListener('load', () => {
   const loader = document.getElementById('loader');
   setTimeout(() => {
     loader.classList.add('hidden');
-    // Trigger hero animations after loader hides
     initStats();
-  }, 400); // Drastically reduced for instant perception
+  }, 3500); // Dramatic entrance
 });
 
 /* =========================================
@@ -231,37 +222,37 @@ function initStats() {
 /* =========================================
    DEMO — OS Holographic Modal
    ========================================= */
-const demoModal = document.getElementById('demoModal');
-const demoIframe = document.getElementById('demoIframe');
-const demoLoading = document.getElementById('demoLoading');
+const openDemo = (url, title, isPrivate = false) => {
+  const modal = document.getElementById('demoModal');
+  const iframe = document.getElementById('demoIframe');
+  const modalTitle = document.getElementById('demoTitle');
+  const loading = document.getElementById('demoLoading');
 
-function openDemo(url, projectName = 'Demo', isRestricted = false) {
-  // Update Modal Title if not 'Demo'
-  const titleEl = document.getElementById('demoTitle');
-  if (titleEl) titleEl.textContent = `sys_exec: ${projectName}.exe`;
+  // Título en español, sin jargon técnico
+  if (modalTitle) modalTitle.textContent = `Viendo: ${title}`;
 
-  // Show Modal and Loading Frame
-  demoModal.classList.add('open');
-  demoLoading.classList.remove('hidden');
-  document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  // Reset loading state
+  if (loading) loading.classList.remove('hidden');
 
-  // Load Iframe with slight delay for dramatic effect
-  setTimeout(() => {
-    demoIframe.src = url;
-  }, 300);
+  // Auto-login or demo access if private
+  let finalUrl = url;
+  if (isPrivate) {
+    const connector = url.includes('?') ? '&' : '?';
+    finalUrl = `${url}${connector}demo_access=guest&bypass_login=true`;
+  }
+
+  // Store URL for fallback
+  modal.dataset.currentUrl = finalUrl;
+
+  iframe.src = finalUrl;
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
 
   // Hide loading state once iframe loads
-  demoIframe.onload = () => {
-    demoLoading.classList.add('hidden');
-
-    // If private system, show a security toast after modal opens
-    if (isRestricted) {
-      setTimeout(() => {
-        showToast('🔒 Seguridad Activa. El portal de acceso es público, pero el interior es confidencial.');
-      }, 500);
-    }
+  iframe.onload = () => {
+    if (loading) loading.classList.add('hidden');
   };
-}
+};
 
 function closeDemo() {
   demoModal.classList.remove('open');

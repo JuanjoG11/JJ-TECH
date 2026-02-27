@@ -21,7 +21,15 @@
   <!-- ===== LOADER ===== -->
   <div id="loader">
     <div class="loader-inner">
-      <div class="loader-logo">JJ<span>TECH</span></div>
+      <div class="loader-logo">
+        <span class="hero-letter">J</span>
+        <span class="hero-letter">J</span>
+        <span class="hero-letter space">&nbsp;</span>
+        <span class="hero-letter">T</span>
+        <span class="hero-letter">E</span>
+        <span class="hero-letter">C</span>
+        <span class="hero-letter">H</span>
+      </div>
       <div class="loader-bar">
         <div class="loader-fill"></div>
       </div>
@@ -35,12 +43,12 @@
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#inicio" class="nav-logo">JJ <span>TECH</span></a>
+      <a href="./#inicio" class="nav-logo">JJ <span>TECH</span></a>
       <ul class="nav-links" id="navMenu">
-        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
-        <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-        <li><a href="#servicios" class="nav-link">Servicios</a></li>
-        <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+        <li><a href="./#inicio" class="nav-link active">Inicio</a></li>
+        <li><a href="./#proyectos" class="nav-link">Proyectos</a></li>
+        <li><a href="./#servicios" class="nav-link">Servicios</a></li>
+        <li><a href="./#nosotros" class="nav-link">Nosotros</a></li>
         <li><a href="#contacto" class="nav-link cta-link">
             <i class="fas fa-fire"></i> Cotizar Ahora
           </a></li>
@@ -120,17 +128,19 @@
           <span class="code-title">jjtech.dev</span>
         </div>
         <div class="code-body">
-          <div class="code-line"><span class="c-keyword">const</span> <span class="c-var">negocio</span> = <span
-              class="c-string">"tuEmpresa"</span>;</div>
-          <div class="code-line"><span class="c-keyword">const</span> <span class="c-var">solución</span> = <span
-              class="c-func">JJTech</span>.<span class="c-method">build</span>({</div>
-          <div class="code-line indent"><span class="c-prop">web</span>: <span class="c-bool">true</span>,</div>
-          <div class="code-line indent"><span class="c-prop">ecommerce</span>: <span class="c-bool">true</span>,</div>
-          <div class="code-line indent"><span class="c-prop">ia</span>: <span class="c-bool">true</span>,</div>
-          <div class="code-line indent"><span class="c-prop">pos</span>: <span class="c-bool">true</span>,</div>
-          <div class="code-line">});</div>
+          <div class="code-line"><span class="c-keyword">Sistema</span>: <span class="c-string">"JJ TECH v3"</span>;
+          </div>
+          <div class="code-line"><span class="c-keyword">Optimizar</span>: <span class="c-func">Ventas</span>();</div>
+          <div class="code-line indent"><span class="c-prop">E-commerce</span>: <span class="c-bool">Activo</span>,
+          </div>
+          <div class="code-line indent"><span class="c-prop">Inventarios</span>: <span class="c-bool">Activo</span>,
+          </div>
+          <div class="code-line indent"><span class="c-prop">Chatbot_IA</span>: <span class="c-bool">Activo</span>,
+          </div>
+          <div class="code-line indent"><span class="c-prop">Analítica</span>: <span class="c-bool">Activo</span>,</div>
+          <div class="code-line">};</div>
           <div class="code-line">&nbsp;</div>
-          <div class="code-line typing-line"><span class="c-comment">// Resultado: 💰 Ventas que escalan</span><span
+          <div class="code-line typing-line">Impacto Real: <span class="gradient-text">Resultados</span><span
               class="type-cursor">▌</span></div>
         </div>
       </div>
@@ -195,16 +205,15 @@
           <i class="fas fa-shoe-prints"></i>
         </div>
         <div class="card-content">
-          <h3>Tennis Y Más</h3>
-          <p>E-commerce de alto rendimiento. Diseñado con una arquitectura ultra rápida, catálogo dinámico optimizado
-            para SEO y un flujo de checkout sin fricciones que maximiza las tasas de conversión.</p>
-          <div class="card-tech">
-            <span>Next.js</span><span>React</span><span>Checkout</span><span>Premium URL</span>
+          <div class="card-header-flex">
+            <h3>Tennis Y Más</h3>
+            <span class="metric-badge">💰 Éxito en Ventas</span>
           </div>
+          <p>E-commerce optimizado para maximizar ventas.</p>
         </div>
         <div class="card-actions">
           <button class="btn-demo" onclick="openDemo('https://tennisymas.com/', 'Tennis Y Mas')">
-            <i class="fas fa-play"></i> Ver Demo
+            <i class="fas fa-play"></i> Ver
           </button>
           <a href="#contacto" class="btn-quote">Quiero uno igual</a>
         </div>
@@ -218,16 +227,15 @@
           <i class="fas fa-store"></i>
         </div>
         <div class="card-content">
-          <h3>Shoppic Variedades</h3>
-          <p>Plataforma retail escalable. Integra gestión de inventario masivo en tiempo real, sistema inteligente de
-            carrito de compras y pasarela de pagos B2C de alta recurrencia.</p>
-          <div class="card-tech">
-            <span>React</span><span>Supabase</span><span>E-Commerce</span><span>Vercel Deploy</span>
+          <div class="card-header-flex">
+            <h3>Shoppic Variedades</h3>
+            <span class="metric-badge">⚡ Inventario Real</span>
           </div>
+          <p>Retail con gestión de inventario y pagos.</p>
         </div>
         <div class="card-actions">
           <button class="btn-demo" onclick="openDemo('https://shoppicvariedades.vercel.app/', 'Shoppic Variedades')">
-            <i class="fas fa-play"></i> Ver Demo
+            <i class="fas fa-play"></i> Ver
           </button>
           <a href="#contacto" class="btn-quote">Quiero uno igual</a>
         </div>
@@ -241,16 +249,15 @@
           <i class="fas fa-spa"></i>
         </div>
         <div class="card-content">
-          <h3>MG Nails Paris</h3>
-          <p>Plataforma integral SaaS para gestión de salones de belleza internacionales. Centraliza el control de
-            agendas, análisis financiero y métricas de rendimiento en una PWA multi-dispositivo.</p>
-          <div class="card-tech">
-            <span>PWA</span><span>Supabase</span><span>Chart.js</span><span>Vercel Deploy</span>
+          <div class="card-header-flex">
+            <h3>MG Nails Paris</h3>
+            <span class="metric-badge">🌍 Software Global</span>
           </div>
+          <p>Gestión de salones, citas y finanzas.</p>
         </div>
         <div class="card-actions">
           <button class="btn-demo" onclick="openDemo('https://mgnailsparis.vercel.app/', 'MG Nails Paris', true)">
-            <i class="fas fa-play"></i> Ver Demo
+            <i class="fas fa-play"></i> Ver
           </button>
           <a href="#contacto" class="btn-quote">Quiero uno igual</a>
         </div>
@@ -264,12 +271,11 @@
           <i class="fas fa-calendar-check"></i>
         </div>
         <div class="card-content">
-          <h3>Agenda Spa</h3>
-          <p>SaaS de agendamiento corporativo con sincronización en tiempo real. Incluye control de personal,
-            notificaciones push automatizadas y arquitectura 'Offline-First' para disponibilidad garantizada.</p>
-          <div class="card-tech">
-            <span>React</span><span>Supabase</span><span>Service Worker</span><span>PWA</span>
+          <div class="card-header-flex">
+            <h3>Agenda Spa</h3>
+            <span class="metric-badge">📅 +500 Citas/mes</span>
           </div>
+          <p>Sistema de agendamiento corporativo con control de personal y disponibilidad garantizada.</p>
         </div>
         <div class="card-actions">
           <button class="btn-demo" onclick="openDemo('https://agendaaspa.vercel.app/', 'Agenda ASPA', true)">
@@ -287,17 +293,16 @@
           <i class="fas fa-truck-fast"></i>
         </div>
         <div class="card-content">
-          <h3>Enterprise Fletes</h3>
-          <p>Núcleo de inteligencia logística para carga pesada. Desarrollado con un motor algorítmico de cotización,
-            dashboards interactivos B2B y seguridad de grado bancario (RLS).</p>
-          <div class="card-tech">
-            <span>Dashboards</span><span>Supabase RLS</span><span>Logistics</span><span>PostgreSQL</span>
+          <div class="card-header-flex">
+            <h3>App Fletes</h3>
+            <span class="metric-badge">🚚 Logística Avanzada</span>
           </div>
+          <p>Logística con motor de cotización y analytics.</p>
         </div>
         <div class="card-actions">
           <button class="btn-demo"
-            onclick="openDemo('https://fletes.tiendasymarcaseje.com/', 'Enterprise Fletes', true)">
-            <i class="fas fa-play"></i> Ver Demo
+            onclick="openDemo('https://enterprisefletes.vercel.app/', 'Enterprise Fletes', true)">
+            <i class="fas fa-play"></i> Ver
           </button>
           <a href="#contacto" class="btn-quote">Quiero uno igual</a>
         </div>
@@ -311,16 +316,15 @@
           <i class="fas fa-boxes-stacked"></i>
         </div>
         <div class="card-content">
-          <h3>Inventario & POS Cloud</h3>
-          <p>Potente ERP en la nube para franquicias multi-sede. Sincronización de stock en milisegundos, análisis
-            predictivo de rotación de inventario y módulo de Punto de Venta (POS) de facturación masiva.</p>
-          <div class="card-tech">
-            <span>Cloud Sync</span><span>Supabase</span><span>Chart.js</span><span>PWA</span>
+          <div class="card-header-flex">
+            <h3>Inventario & POS Cloud</h3>
+            <span class="metric-badge">📦 Control Total</span>
           </div>
+          <p>Sincronización de stock y módulo POS pro.</p>
         </div>
         <div class="card-actions">
           <button class="btn-demo" onclick="openDemo('https://inventario.tennisymas.com/', 'Core Inventario', true)">
-            <i class="fas fa-play"></i> Ver Demo
+            <i class="fas fa-play"></i> Ver
           </button>
           <a href="#contacto" class="btn-quote">Quiero uno igual</a>
         </div>
@@ -334,16 +338,15 @@
           <i class="fas fa-server"></i>
         </div>
         <div class="card-content">
-          <h3>Zentra Dashboard de Indicadores</h3>
-          <p>Plataforma analítica B2B para visualización KPI. Consolida métricas de facturación electrónica y operativos
-            a través de una red de comercios, garantizando una fiabilidad del 99.9%.</p>
-          <div class="card-tech">
-            <span>React</span><span>Supabase</span><span>Dashboard</span><span>Enterprise</span>
+          <div class="card-header-flex">
+            <h3>Zentra</h3>
+            <span class="metric-badge">📊 Analítica Real</span>
           </div>
+          <p>Dashboard de KPIs y facturación electrónica.</p>
         </div>
         <div class="card-actions">
           <button class="btn-demo" onclick="openDemo('https://zentra.tiendasymarcaseje.com/', 'Zentra Core', true)">
-            <i class="fas fa-play"></i> Ver Demo
+            <i class="fas fa-play"></i> Ver
           </button>
           <a href="#contacto" class="btn-quote">Quiero uno igual</a>
         </div>
@@ -357,17 +360,15 @@
           <i class="fas fa-shopping-bag"></i>
         </div>
         <div class="card-content">
-          <h3>Web Empresarial</h3>
-          <p>Portal bandera de e-commerce retail (Tiendas y Marcas Eje). Arquitectura orientada a la conversión masiva,
-            infraestructura CDN
-            para tiempos de carga instantáneos y experiencia de usuario diseñada para maximizar ventas.</p>
-          <div class="card-tech">
-            <span>E-Commerce</span><span>SEO Optmized</span><span>Analytics</span><span>Fast Load</span>
+          <div class="card-header-flex">
+            <h3>Web Empresarial</h3>
+            <span class="metric-badge">🛒 Alta Conversión</span>
           </div>
+          <p>E-commerce diseñado para vender más.</p>
         </div>
         <div class="card-actions">
-          <button class="btn-demo" onclick="openDemo('https://www.tiendasymarcaseje.com/', 'TYM E-Commerce')">
-            <i class="fas fa-play"></i> Ver Demo
+          <button class="btn-demo" onclick="openDemo('https://tiendasymarcaseje.com/', 'Web Empresarial')">
+            <i class="fas fa-play"></i> Ver
           </button>
           <a href="#contacto" class="btn-quote">Quiero uno igual</a>
         </div>
@@ -381,12 +382,11 @@
           <i class="fas fa-exchange-alt"></i>
         </div>
         <div class="card-content">
-          <h3>Portal de Devoluciones</h3>
-          <p>Sistema corporativo para la automatización del ciclo de retornos y garantías. Reduce drásticamente la
-            fricción en servicio al cliente mediante flujos autogestionados y notificaciones en tiempo real.</p>
-          <div class="card-tech">
-            <span>Workflow</span><span>Automations</span><span>Admin Panel</span><span>CRM</span>
+          <div class="card-header-flex">
+            <h3>Portal de Devoluciones</h3>
+            <span class="metric-badge">🔄 Automatizado</span>
           </div>
+          <p>Automatización de retornos y garantías.</p>
         </div>
         <div class="card-actions">
           <button class="btn-demo"
@@ -405,16 +405,15 @@
           <i class="fas fa-globe"></i>
         </div>
         <div class="card-content">
-          <h3>Virtual RPM Portal</h3>
-          <p>Aplicación web dinámica desplegada en infraestructura Edge Cloud. Arquitectura modular de última generación
-            que ofrece tiempos de respuesta mínimos y un diseño centrado en el usuario final.</p>
-          <div class="card-tech">
-            <span>Vite</span><span>React</span><span>Vercel</span><span>Cloud Edge</span>
+          <div class="card-header-flex">
+            <h3>Virtual RPM Portal</h3>
+            <span class="metric-badge">🌐 Envío Rápido</span>
           </div>
+          <p>App web de última generación rápida.</p>
         </div>
         <div class="card-actions">
           <button class="btn-demo" onclick="openDemo('http://virtualrpm.vercel.app/', 'Virtual RPM')">
-            <i class="fas fa-play"></i> Ver Demo
+            <i class="fas fa-play"></i> Ver
           </button>
           <a href="#contacto" class="btn-quote">Quiero uno igual</a>
         </div>
@@ -435,66 +434,83 @@
     <div class="services-grid">
       <div class="service-card reveal">
         <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
-        <h3>E-Commerce Premium</h3>
-        <p>Tiendas online que convierten visitantes en clientes. Catálogo dinámico, carrito, checkout WhatsApp/PSE y
-          panel admin.</p>
-        <div class="service-price">Desde <strong>$800K COP</strong></div>
+        <p>Vende online de forma efectiva.</p>
         <a href="#contacto" class="service-cta">Cotizar <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="service-card reveal">
         <div class="service-icon"><i class="fas fa-cash-register"></i></div>
-        <h3>Inventario & POS</h3>
-        <p>Control total de tu stock en tiempo real. Multi-sede, buscador inteligente, ventas, entradas y reportes de
-          análisis.</p>
-        <div class="service-price">Desde <strong>$600K COP</strong></div>
+        <p>Control de stock en tiempo real.</p>
         <a href="#contacto" class="service-cta">Cotizar <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="service-card reveal">
         <div class="service-icon"><i class="fas fa-calendar-alt"></i></div>
-        <h3>Apps de Gestión</h3>
-        <p>Sistemas de agendamiento, control de ingresos y gestión de empleados. PWA instalable como app nativa en
-          móvil.</p>
-        <div class="service-price">Desde <strong>$500K COP</strong></div>
+        <p>Gestión de citas y personal móvil.</p>
         <a href="#contacto" class="service-cta">Cotizar <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="service-card reveal">
         <div class="service-icon"><i class="fas fa-robot"></i></div>
-        <h3>Chatbots con IA</h3>
-        <p>Asistentes inteligentes que atienden tus clientes 24/7, responden dudas y cierran ventas de forma autónoma.
-        </p>
-        <div class="service-price">Desde <strong>$700K COP</strong></div>
+        <p>Chatbots con IA para vender 24/7.</p>
         <a href="#contacto" class="service-cta">Cotizar <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="service-card reveal">
         <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-        <h3>Dashboards & KPIs</h3>
-        <p>Paneles de inteligencia de negocio con gráficas en tiempo real, filtros avanzados y sincronización automática
-          de datos.</p>
-        <div class="service-price">Desde <strong>$900K COP</strong></div>
+        <p>KPIs e indicadores estratégicos.</p>
         <a href="#contacto" class="service-cta">Cotizar <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="service-card reveal">
         <div class="service-icon"><i class="fas fa-truck-fast"></i></div>
-        <h3>Apps Empresariales</h3>
-        <p>Sistemas a medida para logística, agricultura, control de fletes, reportes PDF y seguridad de grado bancario.
-        </p>
-        <div class="service-price">Desde <strong>$1.2M COP</strong></div>
+        <p>Procesos logísticos a medida.</p>
         <a href="#contacto" class="service-cta">Cotizar <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EL MÉTODO (PROCESS) ===== -->
+  <section id="metodo" class="metodo-section">
+    <div class="section-header reveal">
+      <div class="section-tag">Nuestra Estrategia</div>
+      <h2 class="section-title">El efectivo<span class="gradient-text">Método JJ</span></h2>
+      <p class="section-sub">Un proceso refinado para convertir ideas en activos digitales rentables.</p>
+    </div>
+
+    <div class="metodo-grid">
+      <div class="metodo-item reveal">
+        <div class="metodo-number">01</div>
+        <div class="metodo-icon"><i class="fas fa-chess-knight"></i></div>
+        <h3>Estrategia</h3>
+        <p>Definimos el camino al retorno de inversión.</p>
+      </div>
+      <div class="metodo-item reveal">
+        <div class="metodo-number">02</div>
+        <div class="metodo-icon"><i class="fas fa-microchip"></i></div>
+        <h3>Construcción</h3>
+        <p>Desarrollo ágil con enfoque en escala.</p>
+      </div>
+      <div class="metodo-item reveal">
+        <div class="metodo-number">03</div>
+        <div class="metodo-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Escalamiento</h3>
+        <p>Lanzamiento, optimización y soporte continuo.</p>
       </div>
     </div>
   </section>
 
   <!-- ===== NOSOTROS ===== -->
   <section id="nosotros" class="about-section">
-    <div class="about-grid">
+    <div class="section-header reveal">
+      <div class="section-tag">El Cerebro</div>
+      <h2 class="section-title">Tecnología que <span class="gradient-text">Genera Dinero</span></h2>
+      <p class="section-sub">Creamos software para que tu empresa venda más y opere mejor.</p>
+    </div>
+    <div class="about-wrapper">
       <div class="about-visual reveal">
         <div class="about-card-main">
           <div class="about-avatar">JJ</div>
           <div>
             <h3>Juan J.</h3>
-            <p>CEO & Lead Developer</p>
+            <p>Director de Desarrollo</p>
           </div>
-          <div class="about-badge-online"><span></span> Disponible</div>
+          <div class="about-badge-online"><span></span> En línea</div>
         </div>
         <div class="about-floating-stat stat-a reveal">
           <i class="fas fa-code-branch"></i>
@@ -502,66 +518,48 @@
         </div>
         <div class="about-floating-stat stat-b reveal">
           <i class="fas fa-bolt"></i>
-          <div><strong>&lt;3s</strong> <small>Load Time</small></div>
-        </div>
-        <div class="about-tech-grid reveal">
-          <span>JavaScript</span><span>React</span><span>Django</span>
-          <span>Supabase</span><span>PostgreSQL</span><span>CSS3</span>
+          <div><strong>&lt;3s</strong> <small>Carga</small></div>
         </div>
       </div>
-      <div class="about-content reveal">
-        <div class="section-tag">El Cerebro</div>
-        <h2 class="section-title">Tecnología que<br><span class="gradient-text">Genera Dinero</span></h2>
-        <p class="about-desc">En JJ TECH no hacemos webs de adorno. Cada sistema que construimos tiene un objetivo:
-          <strong>hacer que tu empresa venda más, gaste menos y opere con eficiencia.</strong>
-        </p>
-        <p class="about-desc">Con base en Pereira, Colombia, hemos construido ecosistemas digitales para tiendas
-          físicas, negocios de belleza, distribuidoras logísticas y agricultores. Tecnología de startup para PyMEs.</p>
-        <div class="about-values">
-          <div class="value-item">
-            <i class="fas fa-check-circle"></i>
-            <span>Entrega en tiempo récord</span>
-          </div>
-          <div class="value-item">
-            <i class="fas fa-check-circle"></i>
-            <span>Código limpio y escalable</span>
-          </div>
-          <div class="value-item">
-            <i class="fas fa-check-circle"></i>
-            <span>Soporte post-entrega incluido</span>
-          </div>
-          <div class="value-item">
-            <i class="fas fa-check-circle"></i>
-            <span>Arquitectura Serverless (zero ops)</span>
-          </div>
+    </div>
+    <div class="about-content reveal">
+      <div class="about-values">
+        <div class="value-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Entrega rápida</span>
         </div>
-        <a href="#contacto" class="btn btn-primary">
-          <i class="fas fa-comments"></i>
-          Hablemos de tu Proyecto
-        </a>
+        <div class="value-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Código escalable</span>
+        </div>
+        <div class="value-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Soporte incluido</span>
+        </div>
+        <div class="value-item">
+          <i class="fas fa-check-circle"></i>
+          <span>Arquitectura robusta</span>
+        </div>
       </div>
+      <a href="#contacto" class="btn btn-primary">
+        <i class="fas fa-comments"></i>
+        Inicia tu Proyecto
+      </a>
+    </div>
     </div>
   </section>
 
-  <!-- ===== TESTIMONIAL BAND ===== -->
-  <div class="testimonial-band reveal">
-    <div class="quote-mark">"</div>
-    <p class="testimonial-text">En JJ TECH no solo escribimos código, creamos activos digitales que ponen dinero en tu
-      bolsillo. La tecnología debe ser rentable, no un adorno.</p>
-    <div class="testimonial-author">— Juan J., CEO & Lead Developer, JJ TECH</div>
-  </div>
+  </section>
 
   <!-- ===== CONTACTO / COTIZACIÓN ===== -->
   <section id="contacto" class="contact-section">
-    <div class="contact-bg-orbs">
-      <div class="orb orb-1"></div>
-      <div class="orb orb-2"></div>
+    <div class="section-header reveal">
+      <div class="section-tag">Trabaja con Nosotros</div>
+      <h2 class="section-title">¿Listo para el <span class="gradient-text">Siguiente Nivel?</span></h2>
+      <p class="section-sub">Cuéntanos tu idea. Te respondemos rápido con una propuesta real.</p>
     </div>
     <div class="contact-wrapper">
       <div class="contact-info reveal">
-        <div class="section-tag">Trabaja con Nosotros</div>
-        <h2 class="section-title">¿Listo para el<br><span class="gradient-text">siguiente nivel?</span></h2>
-        <p>Cuéntanos tu idea. Te respondemos en menos de 2 horas con una propuesta real, sin burocracia.</p>
 
         <div class="contact-channels">
           <a href="https://wa.me/573171008880?text=Hola%20JJ%20TECH!%20Quiero%20cotizar%20un%20proyecto" target="_blank"
@@ -697,7 +695,7 @@
             <i class="fas fa-fire"></i> Quiero uno igual
           </a>
           <button class="demo-close" onclick="closeDemo()">
-            <i class="fas fa-xmark"></i>
+            <i class="fas fa-times"></i>
           </button>
         </div>
       </div>
@@ -706,7 +704,7 @@
           <div class="demo-spinner"></div>
           <p>Cargando demo...</p>
         </div>
-        <iframe id="demoIframe" src="" title="Demo del proyecto"
+        <iframe id="demoIframe" src="" frameborder="0" referrerpolicy="no-referrer" title="Demo del proyecto"
           sandbox="allow-scripts allow-same-origin allow-forms allow-popups" loading="lazy"></iframe>
       </div>
     </div>
