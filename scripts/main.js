@@ -222,6 +222,8 @@ function initStats() {
 /* =========================================
    DEMO — OS Holographic Modal
    ========================================= */
+let _demoLoadTimer = null;
+
 const openDemo = (url, title, isPrivate = false) => {
   const modal = document.getElementById('demoModal');
   const iframe = document.getElementById('demoIframe');
@@ -232,7 +234,17 @@ const openDemo = (url, title, isPrivate = false) => {
   if (modalTitle) modalTitle.textContent = `Viendo: ${title}`;
 
   // Reset loading state
-  if (loading) loading.classList.remove('hidden');
+  if (loading) {
+    loading.classList.remove('hidden');
+    loading.innerHTML = `
+      <div class="demo-spinner"></div>
+      <p>Conectando con el servidor...</p>
+      <a href="${finalUrl}" target="_blank" style="margin-top:1rem;color:var(--blue);font-size:0.75rem;text-decoration:underline">Si tarda mucho, haz clic aquí</a>
+    `;
+  }
+
+  // Limpia temporizador anterior
+  if (_demoLoadTimer) clearTimeout(_demoLoadTimer);
 
   // Auto-login or demo access if private
   let finalUrl = url;
@@ -243,23 +255,53 @@ const openDemo = (url, title, isPrivate = false) => {
 
   // Store URL for fallback
   modal.dataset.currentUrl = finalUrl;
+  modal.dataset.demoTitle = title;
 
+  // Carga el iframe
   iframe.src = finalUrl;
   modal.classList.add('open');
   document.body.style.overflow = 'hidden';
 
-  // Hide loading state once iframe loads
+  // Ocultar loading cuando el iframe cargue correctamente
   iframe.onload = () => {
+    clearTimeout(_demoLoadTimer);
     if (loading) loading.classList.add('hidden');
   };
+
+  // Fallback: Si en 4 segundos no hay respuesta (o el sitio bloquea el visor), mostrar botones de acción
+  _demoLoadTimer = setTimeout(() => {
+    if (loading && !loading.classList.contains('hidden')) {
+      loading.innerHTML = `
+        <div style="text-align:center;padding:2rem">
+          <p style="color:#06b6d4;font-size:1.1rem;margin-bottom:1.5rem">
+            ⚠️ El visor está tardando más de lo esperado.
+          </p>
+          <div style="display:flex;flex-direction:column;gap:1rem;align-items:center">
+             <button onclick="document.getElementById('demoLoading').classList.add('hidden')" 
+                     style="background:rgba(255,255,255,0.1);color:#fff;padding:.7rem 1.4rem;border:1px solid var(--blue);border-radius:10px;cursor:pointer">
+               Ignorar y ver de todos modos
+             </button>
+             <a href="${finalUrl}" target="_blank" rel="noopener noreferrer"
+                style="display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,#7c3aed,#06b6d4);color:#fff;padding:.8rem 1.6rem;border-radius:999px;text-decoration:none;font-weight:600">
+               <i class="fas fa-external-link-alt"></i> Ver en ventana completa
+             </a>
+          </div>
+        </div>`;
+    }
+  }, 4000);
 };
 
 function closeDemo() {
-  demoModal.classList.remove('open');
+  if (_demoLoadTimer) clearTimeout(_demoLoadTimer);
+  const modal = document.getElementById('demoModal');
+  const iframe = document.getElementById('demoIframe');
+  
+  if (modal) modal.classList.remove('open');
   document.body.style.overflow = '';
-  // Clear iframe source to stop background processes (e.g. videos/audio in demo)
+  
+  // Limpiar iframe para detener procesos de fondo
   setTimeout(() => {
-    demoIframe.src = '';
+    if (iframe) iframe.src = '';
   }, 300);
 }
 
