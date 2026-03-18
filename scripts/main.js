@@ -233,6 +233,13 @@ const openDemo = (url, title, isPrivate = false) => {
   // Título en español, sin jargon técnico
   if (modalTitle) modalTitle.textContent = `Viendo: ${title}`;
 
+  // Auto-login or demo access if private
+  let finalUrl = url;
+  if (isPrivate) {
+    const connector = url.includes('?') ? '&' : '?';
+    finalUrl = `${url}${connector}demo_access=guest&bypass_login=true`;
+  }
+
   // Reset loading state
   if (loading) {
     loading.classList.remove('hidden');
@@ -245,13 +252,6 @@ const openDemo = (url, title, isPrivate = false) => {
 
   // Limpia temporizador anterior
   if (_demoLoadTimer) clearTimeout(_demoLoadTimer);
-
-  // Auto-login or demo access if private
-  let finalUrl = url;
-  if (isPrivate) {
-    const connector = url.includes('?') ? '&' : '?';
-    finalUrl = `${url}${connector}demo_access=guest&bypass_login=true`;
-  }
 
   // Store URL for fallback
   modal.dataset.currentUrl = finalUrl;
@@ -301,7 +301,7 @@ function closeDemo() {
   
   // Limpiar iframe para detener procesos de fondo
   setTimeout(() => {
-    if (iframe) iframe.src = '';
+    if (iframe) iframe.src = 'about:blank';
   }, 300);
 }
 
