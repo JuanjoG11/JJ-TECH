@@ -371,26 +371,32 @@ function closeDemo() {
 window.openDemo = openDemo;
 window.closeDemo = closeDemo;
 
-/* ── Offer Bubble (nube siempre visible) ── */
+/* ── Offer Bubble ── */
 (function () {
   const popup = document.getElementById('offer-popup');
   const closeBtn = document.getElementById('offer-popup-close');
   if (!popup) return;
 
-  // Always visible — close only hides for current page session
-  closeBtn?.addEventListener('click', () => {
+  // Close button — inline onclick as fallback in case JS events don't fire
+  function closePopup() {
+    popup.classList.remove('show');
     popup.classList.add('hide');
-  });
+  }
 
-  popup.querySelector('.offer-popup-btn')?.addEventListener('click', () => {
-    popup.classList.add('hide');
-  });
+  if (closeBtn) closeBtn.addEventListener('click', closePopup);
+  const cta = popup.querySelector('.offer-popup-btn');
+  if (cta) cta.addEventListener('click', closePopup);
 
-  // Countdown timer — 48h from first visit
-  let endTime = localStorage.getItem('jjtech_offer_end');
-  if (!endTime || parseInt(endTime) < Date.now()) {
+  // Countdown timer — wrap localStorage in try/catch for Edge Tracking Prevention
+  let endTime;
+  try {
+    endTime = localStorage.getItem('jjtech_offer_end');
+    if (!endTime || parseInt(endTime) < Date.now()) {
+      endTime = (Date.now() + 48 * 60 * 60 * 1000).toString();
+      localStorage.setItem('jjtech_offer_end', endTime);
+    }
+  } catch (e) {
     endTime = (Date.now() + 48 * 60 * 60 * 1000).toString();
-    localStorage.setItem('jjtech_offer_end', endTime);
   }
   endTime = parseInt(endTime);
 

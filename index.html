@@ -18,7 +18,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/style.css?v=20260714c">
+
 </head>
 <body>
 
@@ -626,7 +627,7 @@
     </div>
   </div>
 
-  <script src="scripts/main.js"></script>
+  <script src="scripts/main.js?v=20260714b"></script>
 
   <!-- ── WHATSAPP FLOTANTE ── -->
   <a href="https://wa.me/573117100880?text=Hola%20JJ%20TECH!%20Quiero%20hablar%20sobre%20mi%20proyecto" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="Contactar por WhatsApp">
@@ -636,8 +637,8 @@
   </a>
 
   <!-- ── OFERTA POPUP ── -->
-  <div class="offer-popup" id="offer-popup">
-    <button class="offer-popup-close" id="offer-popup-close" aria-label="Cerrar">✕</button>
+  <div class="offer-popup show" id="offer-popup">
+    <button class="offer-popup-close" id="offer-popup-close" aria-label="Cerrar" onclick="var p=document.getElementById('offer-popup');p.classList.remove('show');p.classList.add('hide');">✕</button>
     <div class="offer-bubble-arrow"></div>
     <p class="offer-popup-tag">⚡ Oferta limitada</p>
     <p class="offer-popup-msg">Agenda esta semana y llévate un <strong>15% OFF</strong> en tu primer proyecto.</p>
