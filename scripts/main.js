@@ -380,16 +380,28 @@ window.closeDemo = closeDemo;
   // Don't show if user already closed it in this session
   if (sessionStorage.getItem('jjtech_popup_closed')) return;
 
-  // Appear after 8 seconds
-  const showTimeout = setTimeout(() => {
+  // Appear after 4 seconds, or on first scroll — whichever comes first
+  let shown = false;
+  function showPopup() {
+    if (shown) return;
+    shown = true;
     popup.classList.add('show');
-  }, 8000);
+    window.removeEventListener('scroll', onScroll);
+  }
+
+  const showTimeout = setTimeout(showPopup, 4000);
+
+  function onScroll() {
+    if (window.scrollY > 300) showPopup();
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
 
   closeBtn?.addEventListener('click', () => {
     popup.classList.remove('show');
     popup.classList.add('hide');
     sessionStorage.setItem('jjtech_popup_closed', '1');
     clearTimeout(showTimeout);
+    window.removeEventListener('scroll', onScroll);
   });
 
   // Also hide when clicking the CTA (they're going to WA)
@@ -397,6 +409,7 @@ window.closeDemo = closeDemo;
     popup.classList.remove('show');
     popup.classList.add('hide');
     sessionStorage.setItem('jjtech_popup_closed', '1');
+    window.removeEventListener('scroll', onScroll);
   });
 
   // Timer countdown — persists 48h
