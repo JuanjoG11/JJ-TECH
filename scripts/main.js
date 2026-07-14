@@ -371,6 +371,61 @@ function closeDemo() {
 window.openDemo = openDemo;
 window.closeDemo = closeDemo;
 
+/* ── Offer Popup (chat-style, aparece a los 8s) ── */
+(function () {
+  const popup = document.getElementById('offer-popup');
+  const closeBtn = document.getElementById('offer-popup-close');
+  if (!popup) return;
+
+  // Don't show if user already closed it in this session
+  if (sessionStorage.getItem('jjtech_popup_closed')) return;
+
+  // Appear after 8 seconds
+  const showTimeout = setTimeout(() => {
+    popup.classList.add('show');
+  }, 8000);
+
+  closeBtn?.addEventListener('click', () => {
+    popup.classList.remove('show');
+    popup.classList.add('hide');
+    sessionStorage.setItem('jjtech_popup_closed', '1');
+    clearTimeout(showTimeout);
+  });
+
+  // Also hide when clicking the CTA (they're going to WA)
+  popup.querySelector('.offer-popup-btn')?.addEventListener('click', () => {
+    popup.classList.remove('show');
+    popup.classList.add('hide');
+    sessionStorage.setItem('jjtech_popup_closed', '1');
+  });
+
+  // Timer countdown — persists 48h
+  let endTime = localStorage.getItem('jjtech_offer_end');
+  if (!endTime) {
+    endTime = (Date.now() + 48 * 60 * 60 * 1000).toString();
+    localStorage.setItem('jjtech_offer_end', endTime);
+  }
+  endTime = parseInt(endTime);
+
+  function updateTimer() {
+    const remaining = Math.max(0, endTime - Date.now());
+    const h = Math.floor(remaining / 3600000);
+    const m = Math.floor((remaining % 3600000) / 60000);
+    const s = Math.floor((remaining % 60000) / 1000);
+    const pad = n => String(n).padStart(2, '0');
+    const th = document.getElementById('t-h');
+    const tm = document.getElementById('t-m');
+    const ts = document.getElementById('t-s');
+    if (th) th.textContent = pad(h);
+    if (tm) tm.textContent = pad(m);
+    if (ts) ts.textContent = pad(s);
+    if (remaining === 0) clearInterval(timerInterval);
+  }
+
+  updateTimer();
+  const timerInterval = setInterval(updateTimer, 1000);
+})();
+
 /* ── Animated Number Counter ── */
 function animateCounter(el) {
   const target = parseInt(el.dataset.target, 10);
