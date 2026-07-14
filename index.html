@@ -1,741 +1,540 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JJ TECH | Portafolio de Software & Automatización</title>
-  <meta name="description"
-    content="JJ TECH — Agencia de software premium. Desarrollo web, e-commerce, apps empresariales, chatbots IA e inventarios POS. Pereira, Colombia.">
+  <title>JJ TECH – Software que transforma negocios</title>
+  <meta name="description" content="Agencia de software a medida. Más de 10 sistemas en producción con resultados reales y medibles. E-commerce, ERP, SaaS, apps de gestión y más.">
+  <!-- OG / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="JJ TECH – Software que transforma negocios">
+  <meta property="og:description" content="Agencia de desarrollo a medida. E-commerce, ERPs, SaaS y sistemas de gestión con resultados medibles.">
+  <meta property="og:url" content="https://jjtech.dev">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="JJ TECH – Software que transforma negocios">
+  <!-- Favicon SVG -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231a6cff'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='Outfit,sans-serif' font-weight='900' font-size='14' fill='white'>JJ</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="styles/style.css">
 </head>
-
 <body>
 
-  <!-- ===== LOADER ===== -->
-  <div id="loader">
-    <div class="loader-inner">
-      <div class="loader-logo">
-        <span class="hero-letter">J</span>
-        <span class="hero-letter">J</span>
-        <span class="hero-letter space">&nbsp;</span>
-        <span class="hero-letter">T</span>
-        <span class="hero-letter">E</span>
-        <span class="hero-letter">C</span>
-        <span class="hero-letter">H</span>
+  <!-- ── INTRO SPLASH ── -->
+  <div id="intro-splash">
+    <div class="intro-bg-grid"></div>
+    <div class="intro-glow"></div>
+    <div class="intro-content">
+      <div class="intro-letters" id="intro-letters">
+        <span class="il" data-char="J">J</span><span class="il" data-char="J">J</span><span class="il intro-space"> </span><span class="il" data-char="T">T</span><span class="il" data-char="E">E</span><span class="il" data-char="C">C</span><span class="il" data-char="H">H</span>
       </div>
-      <div class="loader-bar">
-        <div class="loader-fill"></div>
-      </div>
+      <p class="intro-sub" id="intro-sub">Software que transforma negocios reales.</p>
+      <div class="intro-bar" id="intro-bar"><div class="intro-bar-fill"></div></div>
     </div>
   </div>
 
-  <!-- ===== CURSOR ===== -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-follower" id="cursor-follower"></div>
+  <!-- ── NAV ── -->
+  <header class="top-nav" id="top-nav">
+    <a href="#" class="brand">JJ <span>TECH</span></a>
+    <nav class="nav-links">
+      <a href="#proyectos">Proyectos</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#ecosistema">Ecosistema</a>
+    </nav>
+    <a href="https://wa.me/573171008880?text=Hola%20JJ%20TECH!%20Quiero%20conocer%20sus%20soluciones" target="_blank" rel="noopener noreferrer" class="btn btn-nav-cta">
+      <i class="fa-brands fa-whatsapp"></i> Hablemos
+    </a>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+  <!-- Mobile nav drawer -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#proyectos" class="mobile-nav-link">Proyectos</a>
+    <a href="#servicios" class="mobile-nav-link">Servicios</a>
+    <a href="#ecosistema" class="mobile-nav-link">Ecosistema</a>
+    <a href="https://wa.me/573171008880?text=Hola%20JJ%20TECH!%20Quiero%20conocer%20sus%20soluciones" target="_blank" rel="noopener noreferrer" class="mobile-nav-link mobile-nav-cta">
+      <i class="fa-brands fa-whatsapp"></i> Hablemos por WhatsApp
+    </a>
+  </div>
 
-  <!-- ===== NAVBAR ===== -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="./#inicio" class="nav-logo">JJ <span>TECH</span></a>
-      <ul class="nav-links" id="navMenu">
-        <li><a href="./#inicio" class="nav-link active">Inicio</a></li>
-        <li><a href="./#proyectos" class="nav-link">Proyectos</a></li>
-        <li><a href="./#servicios" class="nav-link">Servicios</a></li>
-        <li><a href="./#nosotros" class="nav-link">Nosotros</a></li>
-        <li><a href="#contacto" class="nav-link cta-link">
-            <i class="fas fa-fire"></i> Cotizar Ahora
-          </a></li>
-      </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
+  <main>
 
-  <!-- ===== HERO ===== -->
-  <section id="inicio" class="hero">
-    <canvas id="particles-canvas"></canvas>
-    <div class="hero-glow glow-1"></div>
-    <div class="hero-glow glow-2"></div>
-    <div class="hero-glow glow-3"></div>
+    <!-- ── HERO ── -->
+    <section class="hero-section">
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+      <div class="hero-grid-overlay"></div>
 
-    <div class="hero-content">
       <div class="hero-badge">
-        <span class="badge-dot"></span>
-        Disponible para nuevos proyectos
+        <span class="pulse-dot"></span>
+        <span>10+ Sistemas en Producción Ahora Mismo</span>
       </div>
+
       <h1 class="hero-title">
-        Construimos el<br>
-        <span class="hero-gradient">Software que Vende</span>
-        <span class="hero-cursor">|</span>
+        Construimos el software<br>
+        que <span class="gradient-text">hace crecer</span><br>
+        tu negocio.
       </h1>
+
       <p class="hero-subtitle">
-        Desde tiendas online que convierten hasta sistemas de inventario en tiempo real —
-        cada línea de código que escribimos es un activo digital que trabaja para tu negocio.
+        Somos una agencia de desarrollo a medida. Desde e-commerce hasta ERPs, SaaS y sistemas de gestión — creamos lo que tu negocio necesita para escalar, automatizar y dominar su mercado.
       </p>
+
       <div class="hero-actions">
-        <a href="#contacto" class="btn btn-primary">
-          <i class="fas fa-rocket"></i>
-          Quiero mi Proyecto
+        <a href="https://wa.me/573171008880?text=Hola%20JJ%20TECH!%20Quiero%20agendar%20una%20reunión" target="_blank" rel="noopener noreferrer" class="btn btn-hero-primary">
+          <i class="fa-brands fa-whatsapp"></i> Agenda una llamada gratis
         </a>
-        <a href="#proyectos" class="btn btn-ghost">
-          <i class="fas fa-eye"></i>
-          Ver Portafolio
+        <a href="#proyectos" class="btn btn-hero-ghost">
+          Ver proyectos reales <i class="fa-solid fa-arrow-down"></i>
         </a>
       </div>
+
+      <!-- Floating metrics -->
       <div class="hero-stats">
         <div class="hero-stat">
-          <span class="stat-num" data-target="11">0</span>
-          <span class="stat-label">Proyectos Live</span>
+          <span class="hero-stat-num" data-target="340">0</span><span class="hero-stat-sym">%</span>
+          <span class="hero-stat-label">Crecimiento en ventas</span>
         </div>
-        <div class="stat-divider"></div>
+        <div class="hero-stat-divider"></div>
         <div class="hero-stat">
-          <span class="stat-num" data-target="5">0</span>
-          <span class="stat-label">Clientes Activos</span>
+          <span class="hero-stat-num" data-target="10">0</span><span class="hero-stat-sym">+</span>
+          <span class="hero-stat-label">Sistemas en producción</span>
         </div>
-        <div class="stat-divider"></div>
+        <div class="hero-stat-divider"></div>
         <div class="hero-stat">
-          <span class="stat-num" data-target="100">0</span>
-          <span class="stat-label">% Satisfacción</span>
+          <span class="hero-stat-num" data-target="45">0</span><span class="hero-stat-sym">%</span>
+          <span class="hero-stat-label">Reducción de costos</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-target="500">0</span><span class="hero-stat-sym">+</span>
+          <span class="hero-stat-label">Citas automatizadas/mes</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── MARQUEE LOGOS ── -->
+    <div class="marquee-section">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <span class="marquee-item"><i class="fa-solid fa-store"></i> Tennis Y Más</span>
+          <span class="marquee-item"><i class="fa-solid fa-truck"></i> App Fletes</span>
+          <span class="marquee-item"><i class="fa-solid fa-spa"></i> MG Nails París</span>
+          <span class="marquee-item"><i class="fa-solid fa-chart-line"></i> Zentra ERP</span>
+          <span class="marquee-item"><i class="fa-solid fa-scissors"></i> Brother Hood</span>
+          <span class="marquee-item"><i class="fa-solid fa-box"></i> Inventario POS</span>
+          <span class="marquee-item"><i class="fa-solid fa-car"></i> Virtual RPM</span>
+          <span class="marquee-item"><i class="fa-solid fa-calendar-check"></i> Agenda Spa</span>
+          <span class="marquee-item"><i class="fa-solid fa-bags-shopping"></i> Shoppic</span>
+          <span class="marquee-item"><i class="fa-brands fa-apple"></i> AJ BroTechs</span>
+          <!-- duplicate for loop -->
+          <span class="marquee-item"><i class="fa-solid fa-store"></i> Tennis Y Más</span>
+          <span class="marquee-item"><i class="fa-solid fa-truck"></i> App Fletes</span>
+          <span class="marquee-item"><i class="fa-solid fa-spa"></i> MG Nails París</span>
+          <span class="marquee-item"><i class="fa-solid fa-chart-line"></i> Zentra ERP</span>
+          <span class="marquee-item"><i class="fa-solid fa-scissors"></i> Brother Hood</span>
+          <span class="marquee-item"><i class="fa-solid fa-box"></i> Inventario POS</span>
+          <span class="marquee-item"><i class="fa-solid fa-car"></i> Virtual RPM</span>
+          <span class="marquee-item"><i class="fa-solid fa-calendar-check"></i> Agenda Spa</span>
+          <span class="marquee-item"><i class="fa-solid fa-bags-shopping"></i> Shoppic</span>
+          <span class="marquee-item"><i class="fa-brands fa-apple"></i> AJ BroTechs</span>
         </div>
       </div>
     </div>
 
-    <div class="hero-visual">
-      <!-- FOUNDER PHOTO -->
-      <div class="founder-wrap">
-        <div class="founder-ring"></div>
-        <div class="founder-ring ring-2"></div>
-        <img src="images/founder.png" alt="Juan J. — CEO JJ TECH" class="founder-photo">
-        <div class="founder-chip">
-          <span class="badge-dot"></span>
-          CEO &amp; Lead Developer
-        </div>
-      </div>
-      <!-- CODE WINDOW -->
-      <div class="code-window">
-        <div class="code-header">
-          <span class="dot red"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
-          <span class="code-title">jjtech.dev</span>
-        </div>
-        <div class="code-body">
-          <div class="code-line"><span class="c-keyword">Sistema</span>: <span class="c-string">"JJ TECH v3"</span>;
-          </div>
-          <div class="code-line"><span class="c-keyword">Optimizar</span>: <span class="c-func">Ventas</span>();</div>
-          <div class="code-line indent"><span class="c-prop">E-commerce</span>: <span class="c-bool">Activo</span>,
-          </div>
-          <div class="code-line indent"><span class="c-prop">Inventarios</span>: <span class="c-bool">Activo</span>,
-          </div>
-          <div class="code-line indent"><span class="c-prop">Chatbot_IA</span>: <span class="c-bool">Activo</span>,
-          </div>
-          <div class="code-line indent"><span class="c-prop">Analítica</span>: <span class="c-bool">Activo</span>,</div>
-          <div class="code-line">};</div>
-          <div class="code-line">&nbsp;</div>
-          <div class="code-line typing-line">Impacto Real: <span class="gradient-text">Resultados</span><span
-              class="type-cursor">▌</span></div>
-        </div>
-      </div>
-      <div class="floating-card card-1">
-        <i class="fas fa-chart-line"></i>
-        <div>
-          <strong>+340%</strong>
-          <small>Ventas online</small>
-        </div>
-      </div>
-      <div class="floating-card card-2">
-        <i class="fas fa-fire"></i>
-        <div>
-          <strong>11 proyectos</strong>
-          <small>En producción</small>
-        </div>
-      </div>
-    </div>
-
-    <div class="scroll-indicator">
-      <div class="scroll-dot"></div>
-    </div>
-  </section>
-
-  <!-- ===== TICKER BAND ===== -->
-  <div class="ticker-band">
-    <div class="ticker-track">
-      <span>⚡ E-Commerce</span><span>•</span>
-      <span>🤖 Chatbots IA</span><span>•</span>
-      <span>📊 Dashboards</span><span>•</span>
-      <span>💳 Sistemas POS</span><span>•</span>
-      <span>📱 PWA Apps</span><span>•</span>
-      <span>🚚 Logística</span><span>•</span>
-      <span>🛒 Tiendas Online</span><span>•</span>
-      <span>📡 APIs REST</span><span>•</span>
-      <span>⚡ E-Commerce</span><span>•</span>
-      <span>🤖 Chatbots IA</span><span>•</span>
-      <span>📊 Dashboards</span><span>•</span>
-      <span>💳 Sistemas POS</span><span>•</span>
-      <span>📱 PWA Apps</span><span>•</span>
-      <span>🚚 Logística</span><span>•</span>
-      <span>🛒 Tiendas Online</span><span>•</span>
-      <span>📡 APIs REST</span>
-    </div>
-  </div>
-
-  <!-- ===== PROYECTOS ===== -->
-  <section id="proyectos" class="projects-section">
-    <div class="section-header reveal">
-      <div class="section-tag">Portafolio Real</div>
-      <h2 class="section-title">Proyectos <span class="gradient-text">En Vivo</span></h2>
-      <p class="section-sub">Estos no son mockups — son sistemas reales funcionando para clientes reales.</p>
-    </div>
-
-    <div class="projects-grid">
-
-      <!-- TENNISYMAS -->
-      <div class="project-card reveal" data-demo="https://tennisymas.com/" data-tag="E-Commerce Deportivo">
-        <div class="card-glow"></div>
-        <div class="card-badge">🏆 E-Commerce Activo</div>
-        <div class="card-icon-wrap" style="--icon-color:#ff3333">
-          <i class="fas fa-shoe-prints"></i>
-        </div>
-        <div class="card-content">
-          <div class="card-header-flex">
-            <h3>Tennis Y Más</h3>
-            <span class="metric-badge">💰 Éxito en Ventas</span>
-          </div>
-          <p>E-commerce optimizado para maximizar ventas.</p>
-        </div>
-        <div class="card-actions">
-          <button class="btn-demo" onclick="openDemo('https://tennisymas.com/', 'Tennis Y Mas')">
-            <i class="fas fa-play"></i> Ver
-          </button>
-          <a href="#contacto" class="btn-quote">Quiero uno igual</a>
-        </div>
+    <!-- ── PROJECTS GRID ── -->
+    <section class="projects-section" id="proyectos">
+      <div class="section-header">
+        <p class="section-eyebrow">Portafolio Real</p>
+        <h2 class="section-title">Proyectos que <span class="gradient-text">ya funcionan.</span></h2>
+        <p class="section-desc">No vendemos promesas. Aquí están los sistemas que construimos y que hoy generan resultados medibles.</p>
       </div>
 
-      <!-- SHOPPIC -->
-      <div class="project-card reveal" data-tag="E-Commerce Variedades">
-        <div class="card-glow"></div>
-        <div class="card-badge">🛍️ Tienda Online Activa</div>
-        <div class="card-icon-wrap" style="--icon-color:#f59e0b">
-          <i class="fas fa-store"></i>
-        </div>
-        <div class="card-content">
-          <div class="card-header-flex">
-            <h3>Shoppic Variedades</h3>
-            <span class="metric-badge">⚡ Inventario Real</span>
-          </div>
-          <p>Retail con gestión de inventario y pagos.</p>
-        </div>
-        <div class="card-actions">
-          <button class="btn-demo" onclick="openDemo('https://shoppicvariedades.vercel.app/', 'Shoppic Variedades')">
-            <i class="fas fa-play"></i> Ver
-          </button>
-          <a href="#contacto" class="btn-quote">Quiero uno igual</a>
-        </div>
-      </div>
+      <div class="projects-grid">
 
-      <!-- MG NAILS -->
-      <div class="project-card reveal" data-tag="App Gestión SPA">
-        <div class="card-glow"></div>
-        <div class="card-badge">💅 Sistema Global — París, FR</div>
-        <div class="card-icon-wrap" style="--icon-color:#ff85a1">
-          <i class="fas fa-spa"></i>
-        </div>
-        <div class="card-content">
-          <div class="card-header-flex">
-            <h3>MG Nails Paris</h3>
-            <span class="metric-badge">🌍 Software Global</span>
-          </div>
-          <p>Gestión de salones, citas y finanzas.</p>
-        </div>
-        <div class="card-actions">
-          <button class="btn-demo" onclick="openDemo('https://mgnailsparis.vercel.app/', 'MG Nails Paris', true)">
-            <i class="fas fa-play"></i> Ver
-          </button>
-          <a href="#contacto" class="btn-quote">Quiero uno igual</a>
-        </div>
-      </div>
-
-      <!-- AGENDA STUDIO -->
-      <div class="project-card reveal" data-tag="PWA Citas">
-        <div class="card-glow"></div>
-        <div class="card-badge">📅 SaaS Agendamiento</div>
-        <div class="card-icon-wrap" style="--icon-color:#c084fc">
-          <i class="fas fa-calendar-check"></i>
-        </div>
-        <div class="card-content">
-          <div class="card-header-flex">
-            <h3>Agenda Spa</h3>
-            <span class="metric-badge">📅 +500 Citas/mes</span>
-          </div>
-          <p>Sistema de agendamiento corporativo con control de personal y disponibilidad garantizada.</p>
-        </div>
-        <div class="card-actions">
-          <button class="btn-demo" onclick="openDemo('https://agendaaspa.vercel.app/', 'Agenda ASPA', true)">
-            <i class="fas fa-play"></i> Ver
-          </button>
-          <a href="#contacto" class="btn-quote">Quiero uno igual</a>
-        </div>
-      </div>
-
-      <!-- FLETESAPP -->
-      <div class="project-card reveal" data-tag="Sistema Logístico">
-        <div class="card-glow"></div>
-        <div class="card-badge">🚚 Infraestructura Empresarial</div>
-        <div class="card-icon-wrap" style="--icon-color:#34d399">
-          <i class="fas fa-truck-fast"></i>
-        </div>
-        <div class="card-content">
-          <div class="card-header-flex">
-            <h3>App Fletes</h3>
-            <span class="metric-badge">🚚 Logística Avanzada</span>
-          </div>
-          <p>Logística con motor de cotización y analytics.</p>
-        </div>
-        <div class="card-actions">
-          <button class="btn-demo"
-            onclick="openDemo('https://enterprisefletes.vercel.app/', 'Enterprise Fletes', true)">
-            <i class="fas fa-play"></i> Ver
-          </button>
-          <a href="#contacto" class="btn-quote">Quiero uno igual</a>
-        </div>
-      </div>
-
-      <!-- INVENTARIO TM -->
-      <div class="project-card reveal" data-tag="POS e Inventario">
-        <div class="card-glow"></div>
-        <div class="card-badge">📦 Cloud ERP & POS</div>
-        <div class="card-icon-wrap" style="--icon-color:#60a5fa">
-          <i class="fas fa-boxes-stacked"></i>
-        </div>
-        <div class="card-content">
-          <div class="card-header-flex">
-            <h3>Inventario & POS Cloud</h3>
-            <span class="metric-badge">📦 Control Total</span>
-          </div>
-          <p>Sincronización de stock y módulo POS pro.</p>
-        </div>
-        <div class="card-actions">
-          <button class="btn-demo" onclick="openDemo('https://inventario.tennisymas.com/', 'Core Inventario', true)">
-            <i class="fas fa-play"></i> Ver
-          </button>
-          <a href="#contacto" class="btn-quote">Quiero uno igual</a>
-        </div>
-      </div>
-
-      <!-- ZENTRA -->
-      <div class="project-card reveal" data-tag="Infraestructura B2B">
-        <div class="card-glow"></div>
-        <div class="card-badge">⚡ Core Plataforma Nacional</div>
-        <div class="card-icon-wrap" style="--icon-color:#0070f3">
-          <i class="fas fa-server"></i>
-        </div>
-        <div class="card-content">
-          <div class="card-header-flex">
-            <h3>Zentra</h3>
-            <span class="metric-badge">📊 Analítica Real</span>
-          </div>
-          <p>Dashboard de KPIs y facturación electrónica.</p>
-        </div>
-        <div class="card-actions">
-          <button class="btn-demo" onclick="openDemo('https://zentra.tiendasymarcaseje.com/', 'Zentra Core', true)">
-            <i class="fas fa-play"></i> Ver
-          </button>
-          <a href="#contacto" class="btn-quote">Quiero uno igual</a>
-        </div>
-      </div>
-
-      <!-- TYM MAIN E-COMMERCE -->
-      <div class="project-card reveal" data-tag="E-Commerce Retail">
-        <div class="card-glow"></div>
-        <div class="card-badge">🛍️ Retail Nacional Activo</div>
-        <div class="card-icon-wrap" style="--icon-color:#f97316">
-          <i class="fas fa-shopping-bag"></i>
-        </div>
-        <div class="card-content">
-          <div class="card-header-flex">
-            <h3>Web Empresarial</h3>
-            <span class="metric-badge">🛒 Alta Conversión</span>
-          </div>
-          <p>E-commerce diseñado para vender más.</p>
-        </div>
-        <div class="card-actions">
-          <button class="btn-demo" onclick="openDemo('https://tiendasymarcaseje.com/', 'Web Empresarial')">
-            <i class="fas fa-play"></i> Ver
-          </button>
-          <a href="#contacto" class="btn-quote">Quiero uno igual</a>
-        </div>
-      </div>
-
-      <!-- TYM DEVOLUCIONES -->
-      <div class="project-card reveal" data-tag="Portal Interno">
-        <div class="card-glow"></div>
-        <div class="card-badge">🔄 Workflow Empresarial</div>
-        <div class="card-icon-wrap" style="--icon-color:#eab308">
-          <i class="fas fa-exchange-alt"></i>
-        </div>
-        <div class="card-content">
-          <div class="card-header-flex">
-            <h3>Portal de Devoluciones</h3>
-            <span class="metric-badge">🔄 Automatizado</span>
-          </div>
-          <p>Automatización de retornos y garantías.</p>
-        </div>
-        <div class="card-actions">
-          <button class="btn-demo"
-            onclick="openDemo('https://devoluciones.tiendasymarcaseje.com/', 'TYM Returns', true)">
-            <i class="fas fa-play"></i> Ver
-          </button>
-          <a href="#contacto" class="btn-quote">Quiero uno igual</a>
-        </div>
-      </div>
-
-      <!-- VIRTUAL RPM -->
-      <div class="project-card reveal" data-tag="Visor Interactivo">
-        <div class="card-glow"></div>
-        <div class="card-badge">🌐 Experiencia Web-App</div>
-        <div class="card-icon-wrap" style="--icon-color:#22c55e">
-          <i class="fas fa-globe"></i>
-        </div>
-        <div class="card-content">
-          <div class="card-header-flex">
-            <h3>Virtual RPM Portal</h3>
-            <span class="metric-badge">🌐 Envío Rápido</span>
-          </div>
-          <p>App web de última generación rápida.</p>
-        </div>
-        <div class="card-actions">
-          <button class="btn-demo" onclick="openDemo('https://virtualrpm.vercel.app/', 'Virtual RPM')">
-            <i class="fas fa-play"></i> Ver
-          </button>
-          <a href="#contacto" class="btn-quote">Quiero uno igual</a>
-        </div>
-      </div>
-
-      <!-- BROTHER HOOD -->
-      <div class="project-card reveal" data-tag="Branding & Agendamiento">
-        <div class="card-glow"></div>
-        <div class="card-badge">💈 Barbería Premium — Pereira</div>
-        <div class="card-icon-wrap" style="--icon-color:#d4af37">
-          <i class="fas fa-cut"></i>
-        </div>
-        <div class="card-content">
-          <div class="card-header-flex">
-            <h3>Brother Hood</h3>
-            <span class="metric-badge">📅 Agendamiento Live</span>
-          </div>
-          <p>Landing page interactiva con sistema de citas para barbería de alta gama.</p>
-        </div>
-        <div class="card-actions">
-          <button class="btn-demo" onclick="openDemo('https://luxurybrother.vercel.app/', 'Brother Hood')">
-            <i class="fas fa-play"></i> Ver
-          </button>
-          <a href="#contacto" class="btn-quote">Quiero uno igual</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===== SERVICIOS ===== -->
-  <section id="servicios" class="services-section">
-    <div class="services-bg-grid"></div>
-    <div class="section-header reveal">
-      <div class="section-tag">¿Qué Hacemos?</div>
-      <h2 class="section-title">Nuestras <span class="gradient-text">Soluciones</span></h2>
-      <p class="section-sub">Tecnología rentable. Cada producto que creamos genera retorno de inversión.</p>
-    </div>
-
-    <div class="services-grid">
-      <div class="service-card reveal">
-        <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
-        <p>Vende online de forma efectiva.</p>
-        <a href="#contacto" class="service-cta">Cotizar <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-icon"><i class="fas fa-cash-register"></i></div>
-        <p>Control de stock en tiempo real.</p>
-        <a href="#contacto" class="service-cta">Cotizar <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-icon"><i class="fas fa-calendar-alt"></i></div>
-        <p>Gestión de citas y personal móvil.</p>
-        <a href="#contacto" class="service-cta">Cotizar <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-icon"><i class="fas fa-robot"></i></div>
-        <p>Chatbots con IA para vender 24/7.</p>
-        <a href="#contacto" class="service-cta">Cotizar <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-        <p>KPIs e indicadores estratégicos.</p>
-        <a href="#contacto" class="service-cta">Cotizar <i class="fas fa-arrow-right"></i></a>
-      </div>
-      <div class="service-card reveal">
-        <div class="service-icon"><i class="fas fa-truck-fast"></i></div>
-        <p>Procesos logísticos a medida.</p>
-        <a href="#contacto" class="service-cta">Cotizar <i class="fas fa-arrow-right"></i></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== EL MÉTODO (PROCESS) ===== -->
-  <section id="metodo" class="metodo-section">
-    <div class="section-header reveal">
-      <div class="section-tag">Nuestra Estrategia</div>
-      <h2 class="section-title">El efectivo<span class="gradient-text">Método JJ</span></h2>
-      <p class="section-sub">Un proceso refinado para convertir ideas en activos digitales rentables.</p>
-    </div>
-
-    <div class="metodo-grid">
-      <div class="metodo-item reveal">
-        <div class="metodo-number">01</div>
-        <div class="metodo-icon"><i class="fas fa-chess-knight"></i></div>
-        <h3>Estrategia</h3>
-        <p>Definimos el camino al retorno de inversión.</p>
-      </div>
-      <div class="metodo-item reveal">
-        <div class="metodo-number">02</div>
-        <div class="metodo-icon"><i class="fas fa-microchip"></i></div>
-        <h3>Construcción</h3>
-        <p>Desarrollo ágil con enfoque en escala.</p>
-      </div>
-      <div class="metodo-item reveal">
-        <div class="metodo-number">03</div>
-        <div class="metodo-icon"><i class="fas fa-chart-line"></i></div>
-        <h3>Escalamiento</h3>
-        <p>Lanzamiento, optimización y soporte continuo.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== NOSOTROS ===== -->
-  <section id="nosotros" class="about-section">
-    <div class="section-header reveal">
-      <div class="section-tag">El Cerebro</div>
-      <h2 class="section-title">Tecnología que <span class="gradient-text">Genera Dinero</span></h2>
-      <p class="section-sub">Creamos software para que tu empresa venda más y opere mejor.</p>
-    </div>
-    <div class="about-wrapper">
-      <div class="about-visual reveal">
-        <div class="about-card-main">
-          <div class="about-avatar">JJ</div>
-          <div>
-            <h3>Juan J.</h3>
-            <p>Director de Desarrollo</p>
-          </div>
-          <div class="about-badge-online"><span></span> En línea</div>
-        </div>
-        <div class="about-floating-stat stat-a reveal">
-          <i class="fas fa-code-branch"></i>
-          <div><strong>11</strong> <small>Proyectos</small></div>
-        </div>
-        <div class="about-floating-stat stat-b reveal">
-          <i class="fas fa-bolt"></i>
-          <div><strong>&lt;3s</strong> <small>Carga</small></div>
-        </div>
-      </div>
-    </div>
-    <div class="about-content reveal">
-      <div class="about-values">
-        <div class="value-item">
-          <i class="fas fa-check-circle"></i>
-          <span>Entrega rápida</span>
-        </div>
-        <div class="value-item">
-          <i class="fas fa-check-circle"></i>
-          <span>Código escalable</span>
-        </div>
-        <div class="value-item">
-          <i class="fas fa-check-circle"></i>
-          <span>Soporte incluido</span>
-        </div>
-        <div class="value-item">
-          <i class="fas fa-check-circle"></i>
-          <span>Arquitectura robusta</span>
-        </div>
-      </div>
-      <a href="#contacto" class="btn btn-primary">
-        <i class="fas fa-comments"></i>
-        Inicia tu Proyecto
-      </a>
-    </div>
-    </div>
-  </section>
-
-  </section>
-
-  <!-- ===== CONTACTO / COTIZACIÓN ===== -->
-  <section id="contacto" class="contact-section">
-    <div class="section-header reveal">
-      <div class="section-tag">Trabaja con Nosotros</div>
-      <h2 class="section-title">¿Listo para el <span class="gradient-text">Siguiente Nivel?</span></h2>
-      <p class="section-sub">Cuéntanos tu idea. Te respondemos rápido con una propuesta real.</p>
-    </div>
-    <div class="contact-wrapper">
-      <div class="contact-info reveal">
-
-        <div class="contact-channels">
-          <a href="https://wa.me/573171008880?text=Hola%20JJ%20TECH!%20Quiero%20cotizar%20un%20proyecto" target="_blank"
-            class="channel-card channel-wa">
-            <i class="fab fa-whatsapp"></i>
-            <div>
-              <strong>WhatsApp Directo</strong>
-              <small>+57 317 100 8880</small>
-            </div>
-            <i class="fas fa-arrow-right channel-arrow"></i>
-          </a>
-          <a href="mailto:juanjosecolorado266@gmail.com" class="channel-card channel-mail">
-            <i class="fas fa-envelope"></i>
-            <div>
-              <strong>Email</strong>
-              <small>juanjosecolorado266@gmail.com</small>
-            </div>
-            <i class="fas fa-arrow-right channel-arrow"></i>
-          </a>
-          <div class="channel-card channel-location">
-            <i class="fas fa-map-marker-alt"></i>
-            <div>
-              <strong>Ubicación</strong>
-              <small>Pereira, Risaralda, Colombia</small>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="quote-form-wrap reveal">
-        <div class="quote-form-card">
-          <div class="form-header">
-            <h3>Cotiza tu Proyecto</h3>
-            <p>Rellena el formulario y te enviamos la propuesta por WhatsApp.</p>
-          </div>
-          <form id="quoteForm" class="quote-form" novalidate>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="q-name">Tu Nombre</label>
-                <input type="text" id="q-name" placeholder="Ej: Carlos Rincón" required>
-              </div>
-              <div class="form-group">
-                <label for="q-business">Nombre del Negocio</label>
-                <input type="text" id="q-business" placeholder="Ej: Deportes Total">
+        <article class="project-card glass-panel featured">
+          <div class="card-preview">
+            <div class="browser-bar"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-url">zentra.tiendasymarcaseje.com</span></div>
+            <div class="preview-frame">
+              <img src="https://s0.wp.com/mshots/v1/https://zentra.tiendasymarcaseje.com?w=1280&h=800" alt="Zentra ERP preview" class="preview-img" loading="lazy">
+              <div class="preview-overlay">
+                <span class="preview-live-badge"><span class="pulse-dot"></span> En vivo</span>
               </div>
             </div>
-            <div class="form-group">
-              <label for="q-phone">WhatsApp / Teléfono</label>
-              <input type="tel" id="q-phone" placeholder="Ej: 3201234567" required>
+          </div>
+          <div class="card-body">
+            <div class="project-card-top">
+              <div class="project-icon-wrap" style="background:linear-gradient(135deg,#1a6cff22,#00d4ff22);border-color:#1a6cff44"><i class="fa-solid fa-chart-network" style="color:#00d4ff"></i></div>
+              <span class="project-tag">ERP · Dashboard</span>
             </div>
-            <div class="form-group">
-              <label for="q-service">¿Qué necesitas?</label>
-              <select id="q-service" required>
-                <option value="" disabled selected>Selecciona un servicio...</option>
-                <option value="E-Commerce / Tienda Online">🛍️ E-Commerce / Tienda Online</option>
-                <option value="Inventario y POS">📦 Inventario y POS</option>
-                <option value="App de Gestión / Agendamiento">📅 App de Gestión / Agendamiento</option>
-                <option value="Dashboard Empresarial KPIs">📊 Dashboard Empresarial KPIs</option>
-                <option value="Chatbot con IA">🤖 Chatbot con IA</option>
-                <option value="App Empresarial a Medida">⚙️ App Empresarial a Medida</option>
-                <option value="No sé, quiero asesoría">💬 No sé, quiero asesoría gratis</option>
-              </select>
+            <h3 class="project-name">Zentra Core ERP</h3>
+            <p class="project-desc">Dashboard corporativo con facturación electrónica, analítica en tiempo real y toma de decisiones integrada.</p>
+            <div class="card-footer-row">
+              <a href="https://zentra.tiendasymarcaseje.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Abrir <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
-            <div class="form-group">
-              <label for="q-desc">Cuéntanos tu idea</label>
-              <textarea id="q-desc" rows="4"
-                placeholder="¿Qué problema quieres resolver? ¿Qué debe hacer tu app? Cualquier detalle ayuda..."
-                required></textarea>
+          </div>
+        </article>
+
+        <article class="project-card glass-panel">
+          <div class="card-preview">
+            <div class="browser-bar"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-url">tennisymas.com</span></div>
+            <div class="preview-frame">
+              <img src="https://s0.wp.com/mshots/v1/https://tennisymas.com?w=1280&h=800" alt="Tennis Y Más preview" class="preview-img" loading="lazy">
+              <div class="preview-overlay">
+                <span class="preview-live-badge"><span class="pulse-dot"></span> En vivo</span>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="q-budget">Presupuesto aproximado</label>
-              <select id="q-budget">
-                <option value="" disabled selected>Selecciona un rango...</option>
-                <option value="Menos de $500K COP">Menos de $500K COP</option>
-                <option value="$500K - $1M COP">$500K — $1M COP</option>
-                <option value="$1M - $3M COP">$1M — $3M COP</option>
-                <option value="Más de $3M COP">Más de $3M COP</option>
-                <option value="No sé, quiero orientación">No sé, quiero orientación</option>
-              </select>
+          </div>
+          <div class="card-body">
+            <div class="project-card-top">
+              <div class="project-icon-wrap" style="background:linear-gradient(135deg,#ff6b2222,#ff9a0022);border-color:#ff6b2244"><i class="fa-solid fa-store" style="color:#ff9a00"></i></div>
+              <span class="project-tag">E-Commerce</span>
             </div>
-            <button type="submit" id="submitQuote" class="btn btn-primary btn-full">
-              <i class="fab fa-whatsapp"></i>
-              Enviar por WhatsApp
+            <h3 class="project-name">Tennis Y Más</h3>
+            <p class="project-desc">Tienda deportiva con pasarela de pagos, catálogo en vivo y procesamiento de pedidos automatizado.</p>
+            <div class="card-footer-row">
+              <a href="https://tennisymas.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Abrir <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass-panel">
+          <div class="card-preview">
+            <div class="browser-bar"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-url">mgnailsparis.vercel.app</span></div>
+            <div class="preview-frame">
+              <img src="https://s0.wp.com/mshots/v1/https://mgnailsparis.vercel.app?w=1280&h=800" alt="MG Nails preview" class="preview-img" loading="lazy">
+              <div class="preview-overlay"><span class="preview-live-badge"><span class="pulse-dot"></span> En vivo</span></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="project-card-top">
+              <div class="project-icon-wrap" style="background:linear-gradient(135deg,#cc44ff22,#8866ff22);border-color:#cc44ff44"><i class="fa-solid fa-spa" style="color:#cc44ff"></i></div>
+              <span class="project-tag">SaaS Internacional</span>
+            </div>
+            <h3 class="project-name">MG Nails París</h3>
+            <p class="project-desc">Sistema de reservas, control de personal y finanzas para spa operando en París, Francia.</p>
+            <div class="card-footer-row">
+              <a href="https://mgnailsparis.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Abrir <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass-panel">
+          <div class="card-preview">
+            <div class="browser-bar"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-url">fletes.tiendasymarcaseje.com</span></div>
+            <div class="preview-frame">
+              <img src="https://s0.wp.com/mshots/v1/https://fletes.tiendasymarcaseje.com?w=1280&h=800" alt="App Fletes preview" class="preview-img" loading="lazy">
+              <div class="preview-overlay"><span class="preview-live-badge"><span class="pulse-dot"></span> En vivo</span></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="project-card-top">
+              <div class="project-icon-wrap" style="background:linear-gradient(135deg,#22cc8822,#00ffaa22);border-color:#22cc8844"><i class="fa-solid fa-truck-fast" style="color:#22cc88"></i></div>
+              <span class="project-tag">Logística</span>
+            </div>
+            <h3 class="project-name">App Fletes</h3>
+            <p class="project-desc">Cálculo automático de tarifas, asignación de rutas y trazabilidad total de despachos en tiempo real.</p>
+            <div class="card-footer-row">
+              <a href="https://fletes.tiendasymarcaseje.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Abrir <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass-panel">
+          <div class="card-preview">
+            <div class="browser-bar"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-url">inventario.tennisymas.com</span></div>
+            <div class="preview-frame">
+              <img src="https://s0.wp.com/mshots/v1/https://inventario.tennisymas.com?w=1280&h=800" alt="Inventario POS preview" class="preview-img" loading="lazy">
+              <div class="preview-overlay"><span class="preview-live-badge"><span class="pulse-dot"></span> En vivo</span></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="project-card-top">
+              <div class="project-icon-wrap" style="background:linear-gradient(135deg,#1a6cff22,#00aaff22);border-color:#1a6cff44"><i class="fa-solid fa-box-open" style="color:#00aaff"></i></div>
+              <span class="project-tag">ERP · POS Cloud</span>
+            </div>
+            <h3 class="project-name">Inventario POS</h3>
+            <p class="project-desc">Punto de venta y control de stock sincronizados en la nube. Cero descuadres, cero pérdidas.</p>
+            <div class="card-footer-row">
+              <a href="https://inventario.tennisymas.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Abrir <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass-panel">
+          <div class="card-preview">
+            <div class="browser-bar"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-url">agendaaspa.vercel.app</span></div>
+            <div class="preview-frame">
+              <img src="https://s0.wp.com/mshots/v1/https://agendaaspa.vercel.app?w=1280&h=800" alt="Agenda Spa preview" class="preview-img" loading="lazy">
+              <div class="preview-overlay"><span class="preview-live-badge"><span class="pulse-dot"></span> En vivo</span></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="project-card-top">
+              <div class="project-icon-wrap" style="background:linear-gradient(135deg,#ff44aa22,#ff226622);border-color:#ff44aa44"><i class="fa-solid fa-calendar-check" style="color:#ff44aa"></i></div>
+              <span class="project-tag">SaaS · Agendamiento</span>
+            </div>
+            <h3 class="project-name">Agenda Spa</h3>
+            <p class="project-desc">Agendamiento automático 24/7. Los clientes reservan sin llamadas, el negocio opera sin fricción.</p>
+            <div class="card-footer-row">
+              <a href="https://agendaaspa.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Abrir <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass-panel">
+          <div class="card-preview">
+            <div class="browser-bar"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-url">luxurybrother.vercel.app</span></div>
+            <div class="preview-frame">
+              <img src="https://s0.wp.com/mshots/v1/https://luxurybrother.vercel.app?w=1280&h=800" alt="Brother Hood preview" class="preview-img" loading="lazy">
+              <div class="preview-overlay"><span class="preview-live-badge"><span class="pulse-dot"></span> En vivo</span></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="project-card-top">
+              <div class="project-icon-wrap" style="background:linear-gradient(135deg,#ffcc0022,#ff990022);border-color:#ffcc0044"><i class="fa-solid fa-scissors" style="color:#ffcc00"></i></div>
+              <span class="project-tag">Reservas en Vivo</span>
+            </div>
+            <h3 class="project-name">Brother Hood</h3>
+            <p class="project-desc">Landing y sistema de citas en tiempo real para barbería premium. Notificaciones instantáneas al barbero.</p>
+            <div class="card-footer-row">
+              <a href="https://luxurybrother.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Abrir <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass-panel">
+          <div class="card-preview">
+            <div class="browser-bar"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-url">virtualrpm.vercel.app</span></div>
+            <div class="preview-frame">
+              <img src="https://s0.wp.com/mshots/v1/https://virtualrpm.vercel.app?w=1280&h=800" alt="Virtual RPM preview" class="preview-img" loading="lazy">
+              <div class="preview-overlay"><span class="preview-live-badge"><span class="pulse-dot"></span> En vivo</span></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="project-card-top">
+              <div class="project-icon-wrap" style="background:linear-gradient(135deg,#00ccff22,#0066ff22);border-color:#00ccff44"><i class="fa-solid fa-car-side" style="color:#00ccff"></i></div>
+              <span class="project-tag">Catálogo Interactivo</span>
+            </div>
+            <h3 class="project-name">Virtual RPM</h3>
+            <p class="project-desc">Catálogo automotriz de alto rendimiento con carga instantánea. Velocidad y diseño de primer nivel.</p>
+            <div class="card-footer-row">
+              <a href="https://virtualrpm.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Abrir <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass-panel">
+          <div class="card-preview">
+            <div class="browser-bar"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-url">shoppicvariedades.vercel.app</span></div>
+            <div class="preview-frame">
+              <img src="https://s0.wp.com/mshots/v1/https://shoppicvariedades.vercel.app?w=1280&h=800" alt="Shoppic preview" class="preview-img" loading="lazy">
+              <div class="preview-overlay"><span class="preview-live-badge"><span class="pulse-dot"></span> En vivo</span></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="project-card-top">
+              <div class="project-icon-wrap" style="background:linear-gradient(135deg,#ff880022,#ffaa4422);border-color:#ff880044"><i class="fa-solid fa-bags-shopping" style="color:#ff8800"></i></div>
+              <span class="project-tag">E-Commerce Multicanal</span>
+            </div>
+            <h3 class="project-name">Shoppic Variedades</h3>
+            <p class="project-desc">Tienda retail multicanal conectada con bodega y envíos nacionales. Stock siempre sincronizado.</p>
+            <div class="card-footer-row">
+              <a href="https://shoppicvariedades.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Abrir <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card glass-panel">
+          <div class="card-preview">
+            <div class="browser-bar"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-url">ajbrotechs.vercel.app</span></div>
+            <div class="preview-frame">
+              <img src="https://s0.wp.com/mshots/v1/https://ajbrotechs.vercel.app?w=1280&h=800" alt="AJ BroTechs preview" class="preview-img" loading="lazy">
+              <div class="preview-overlay"><span class="preview-live-badge"><span class="pulse-dot"></span> En vivo</span></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="project-card-top">
+              <div class="project-icon-wrap" style="background:linear-gradient(135deg,#ffffff12,#aaaaff22);border-color:#ffffff22"><i class="fa-brands fa-apple" style="color:#e0e0e0"></i></div>
+              <span class="project-tag">E-Commerce Tech</span>
+            </div>
+            <h3 class="project-name">AJ BroTechs</h3>
+            <p class="project-desc">Tienda de accesorios Apple-compatible con carrito, contador de oferta, reseñas y pago contra entrega a todo Colombia.</p>
+            <div class="card-footer-row">
+              <a href="https://ajbrotechs.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Abrir <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ── ECOSYSTEM SVG ── -->
+    <section class="ecosystem-section" id="ecosistema">
+      <div class="section-header">
+        <p class="section-eyebrow">Ecosistema Tecnológico</p>
+        <h2 class="section-title">Una red de sistemas<br><span class="gradient-text">todos conectados.</span></h2>
+        <p class="section-desc">Cada proyecto que construimos puede integrarse con los demás. Una plataforma unificada que crece con tu negocio.</p>
+      </div>
+
+      <div class="ecosystem-wrapper glass-panel">
+        <div class="ecosystem-top-bar">
+          <span class="eco-status"><span class="pulse-dot"></span> Red Operativa Activa</span>
+          <span class="eco-hint"><i class="fa-solid fa-hand-pointer"></i> Pasa el cursor sobre los nodos</span>
+        </div>
+
+        <svg id="network-svg" viewBox="0 0 900 530" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;display:block;overflow:hidden"></svg>
+
+        <!-- Drawer -->
+        <div class="eco-drawer glass-panel" id="eco-drawer">
+          <div class="eco-drawer-header">
+            <div>
+              <p class="eco-drawer-type" id="proj-type">Tipo de Sistema</p>
+              <h3 class="eco-drawer-name" id="proj-name">Zentra Core ERP</h3>
+            </div>
+            <div class="eco-drawer-metric">
+              <span class="eco-metric-val" id="proj-metric">–</span>
+              <span class="eco-metric-label" id="proj-metric-label">Impacto</span>
+            </div>
+          </div>
+          <p class="eco-drawer-desc" id="proj-desc">Selecciona un nodo para ver detalles del sistema.</p>
+          <div class="eco-drawer-actions">
+            <button id="btn-open-demo" class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver sistema en vivo
             </button>
-          </form>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="footer-logo">JJ <span>TECH</span></div>
-        <p>Construimos el software que hace crecer tu negocio.</p>
+    <!-- ── SERVICES ── -->
+    <section class="services-section" id="servicios">
+      <div class="section-header">
+        <p class="section-eyebrow">¿Qué construimos?</p>
+        <h2 class="section-title">Si lo imaginas,<br><span class="gradient-text">lo construimos.</span></h2>
       </div>
-      <div class="footer-links-group">
-        <h4>Navegación</h4>
-        <a href="#inicio">Inicio</a>
+
+      <div class="services-grid">
+        <div class="service-card glass-panel">
+          <div class="service-icon"><i class="fa-solid fa-shop"></i></div>
+          <h3>E-Commerce & Retail</h3>
+          <p>Tiendas que venden 24/7 con pagos integrados, gestión de inventario y pedidos automatizados.</p>
+        </div>
+        <div class="service-card glass-panel">
+          <div class="service-icon"><i class="fa-solid fa-building-columns"></i></div>
+          <h3>ERPs & Sistemas Internos</h3>
+          <p>Centraliza toda tu operación en una sola plataforma. Facturación, inventario, reportes y más.</p>
+        </div>
+        <div class="service-card glass-panel">
+          <div class="service-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+          <h3>Apps SaaS a Medida</h3>
+          <p>Plataformas multi-usuario con roles, suscripciones y acceso en la nube desde cualquier dispositivo.</p>
+        </div>
+        <div class="service-card glass-panel">
+          <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
+          <h3>Automatización & IA</h3>
+          <p>Elimina tareas repetitivas. Flujos automáticos, chatbots, reportes y procesos sin intervención humana.</p>
+        </div>
+        <div class="service-card glass-panel">
+          <div class="service-icon"><i class="fa-solid fa-calendar-days"></i></div>
+          <h3>Sistemas de Agendamiento</h3>
+          <p>Reservas online 24/7, notificaciones automáticas y panel de gestión para tu equipo.</p>
+        </div>
+        <div class="service-card glass-panel">
+          <div class="service-icon"><i class="fa-solid fa-chart-mixed"></i></div>
+          <h3>Dashboards & Analytics</h3>
+          <p>Visualiza tu operación en tiempo real. Decisiones basadas en datos, no en suposiciones.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROCESS ── -->
+    <section class="process-section">
+      <div class="section-header">
+        <p class="section-eyebrow">Nuestro proceso</p>
+        <h2 class="section-title">De la idea al producto<br><span class="gradient-text">en tiempo récord.</span></h2>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <h4>Diagnóstico</h4>
+          <p>Entendemos tu negocio, tus procesos y dónde están las fugas de dinero y tiempo.</p>
+        </div>
+        <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <h4>Diseño & Propuesta</h4>
+          <p>Diseñamos la arquitectura del sistema y te presentamos un plan claro con tiempos y costos.</p>
+        </div>
+        <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <h4>Desarrollo Ágil</h4>
+          <p>Construimos en sprints cortos con entregas visibles. Tú ves el avance en tiempo real.</p>
+        </div>
+        <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <h4>Lanzamiento & Soporte</h4>
+          <p>Desplegamos en producción y te acompañamos con soporte continuo para que nunca pares.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FINAL CTA ── -->
+    <section class="final-cta-section">
+      <div class="final-cta-glow"></div>
+      <div class="final-cta-content glass-panel">
+        <p class="section-eyebrow" style="text-align:center;">¿Listo para el siguiente nivel?</p>
+        <h2 class="final-cta-title">Tu competencia ya<br>está digitalizándose.</h2>
+        <p class="final-cta-sub">Una llamada de 30 minutos es suficiente para identificar qué sistema puede transformar tu operación. Sin compromiso, sin costo.</p>
+        <a href="https://wa.me/573171008880?text=Hola%20JJ%20TECH!%20Quiero%20agendar%20una%20reunión%20para%20conocer%20sus%20soluciones" target="_blank" rel="noopener noreferrer" class="btn btn-cta-big">
+          <i class="fa-brands fa-whatsapp"></i>
+          Agendar reunión por WhatsApp
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <p class="final-cta-note">Respuesta en menos de 1 hora · Sin intermediarios · Hablas directo con el equipo</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand">JJ <span>TECH</span></span>
+        <p>Software que transforma negocios reales.</p>
+      </div>
+      <div class="footer-links">
         <a href="#proyectos">Proyectos</a>
         <a href="#servicios">Servicios</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#ecosistema">Ecosistema</a>
+        <a href="https://wa.me/573171008880" target="_blank" rel="noopener noreferrer">Contacto</a>
       </div>
-      <div class="footer-links-group">
-        <h4>Contacto</h4>
-        <a href="https://wa.me/573171008880" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-        <a href="mailto:juanjosecolorado266@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-        <span><i class="fas fa-map-marker-alt"></i> Pereira, Colombia</span>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 JJ TECH. Todos los derechos reservados.</p>
-      <p>Hecho con ❤️ en Pereira, Risaralda.</p>
+      <p class="footer-copy">© 2025 JJ TECH. Todos los derechos reservados.</p>
     </div>
   </footer>
 
-  <!-- ===== FLOATING WHATSAPP ===== -->
-  <a href="https://wa.me/573171008880?text=Hola%20JJ%20TECH!%20Vi%20su%20portafolio%20y%20quiero%20cotizar"
-    target="_blank" class="wa-float" id="waFloat">
-    <i class="fab fa-whatsapp"></i>
-    <span class="wa-pulse"></span>
-  </a>
-
-  <!-- ===== DEMO MODAL ===== -->
-  <div class="demo-modal" id="demoModal">
+  <!-- ── DEMO MODAL ── -->
+  <div id="demoModal" class="demo-modal">
     <div class="demo-modal-inner">
       <div class="demo-modal-header">
-        <div class="demo-modal-title" id="demoTitle">Demo</div>
-        <div class="demo-modal-actions">
-          <a href="#contacto" class="demo-cta" onclick="closeDemo()">
-            <i class="fas fa-fire"></i> Quiero uno igual
-          </a>
-          <button class="demo-close" onclick="closeDemo()">
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
+        <span id="demoTitle" class="demo-title">Sistema en Vivo</span>
+        <button onclick="closeDemo()" class="demo-close"><i class="fa-solid fa-xmark"></i></button>
       </div>
-      <div class="demo-modal-body">
-        <div class="demo-loading" id="demoLoading">
-          <div class="demo-spinner"></div>
-          <p>Cargando demo...</p>
-        </div>
-        <iframe id="demoIframe" src="" frameborder="0" referrerpolicy="no-referrer" title="Demo del proyecto"
-          loading="lazy"></iframe>
+      <div id="demoLoading" class="demo-loading"></div>
+      <div id="demoOverlay" class="demo-overlay" style="display:flex">
+        <div class="demo-spinner"></div>
+        <p>Conectando con el sistema...</p>
       </div>
+      <iframe id="demoIframe" src="about:blank" title="Demo" sandbox="allow-scripts allow-same-origin allow-forms allow-popups" loading="lazy"></iframe>
     </div>
   </div>
 
-  <!-- ===== TOAST ===== -->
-  <div id="toast" class="toast"></div>
-
-  <script src="scripts/main.js?v=4"></script>
+  <script src="scripts/main.js"></script>
 </body>
-
 </html>
