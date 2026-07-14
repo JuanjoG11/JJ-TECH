@@ -418,7 +418,28 @@ window.closeDemo = closeDemo;
   const timerInterval = setInterval(updateTimer, 1000);
 })();
 
-/* ── Animated Number Counter ── */
+/* ── Live Visitor Counter ── */
+(function () {
+  const el = document.getElementById('live-count');
+  if (!el) return;
+  // Simula entre 4 y 11 visitantes, fluctúa cada 8-18 segundos
+  let current = Math.floor(Math.random() * 5) + 5; // 5–9 inicial
+  el.textContent = current;
+
+  function flicker() {
+    const delta = Math.random() < 0.55 ? 1 : -1; // sube más de lo que baja
+    current = Math.max(4, Math.min(12, current + delta));
+    el.style.transform = 'scale(1.3)';
+    el.style.color = '#fff';
+    setTimeout(() => {
+      el.textContent = current;
+      el.style.transform = 'scale(1)';
+      el.style.color = '';
+    }, 180);
+    setTimeout(flicker, 8000 + Math.random() * 10000);
+  }
+  setTimeout(flicker, 5000 + Math.random() * 5000);
+})();
 function animateCounter(el) {
   const target = parseInt(el.dataset.target, 10);
   const duration = 1800;

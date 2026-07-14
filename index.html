@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="styles/style.css?v=20260714c">
+  <link rel="stylesheet" href="styles/style.css?v=20260714l">
 
 </head>
 <body>
@@ -81,7 +81,8 @@
       </h1>
 
       <p class="hero-subtitle">
-        Somos una agencia de desarrollo a medida. Desde e-commerce hasta ERPs, SaaS y sistemas de gestión — creamos lo que tu negocio necesita para escalar, automatizar y dominar su mercado.
+        E-commerce, ERPs, SaaS y sistemas a medida.<br>
+        Construimos lo que tu negocio necesita para vender más y trabajar menos.
       </p>
 
       <div class="hero-actions">
@@ -373,41 +374,138 @@
       </div>
     </section>
 
-    <!-- ── ECOSYSTEM SVG ── -->
-    <section class="ecosystem-section" id="ecosistema">
+    <!-- ── ANTES / DESPUÉS ── -->
+    <section class="ba-section" id="ecosistema">
       <div class="section-header">
-        <p class="section-eyebrow">Ecosistema Tecnológico</p>
-        <h2 class="section-title">Una red de sistemas<br><span class="gradient-text">todos conectados.</span></h2>
-        <p class="section-desc">Cada proyecto que construimos puede integrarse con los demás. Una plataforma unificada que crece con tu negocio.</p>
+        <p class="section-eyebrow">La transformación real</p>
+        <h2 class="section-title">¿Cómo estás operando<br><span class="gradient-text">hoy vs. con JJ TECH?</span></h2>
+        <p class="section-desc">El 80% de los negocios en Colombia siguen operando en modo manual. Cada día que pasa es dinero que se escapa.</p>
       </div>
 
-      <div class="ecosystem-wrapper glass-panel">
-        <div class="ecosystem-top-bar">
-          <span class="eco-status"><span class="pulse-dot"></span> Red Operativa Activa</span>
-          <span class="eco-hint"><i class="fa-solid fa-hand-pointer"></i> Pasa el cursor sobre los nodos</span>
+      <div class="ba-wrapper">
+
+        <!-- ANTES -->
+        <div class="ba-panel ba-before">
+          <div class="ba-panel-header">
+            <span class="ba-badge ba-badge-red">😰 Sin sistema</span>
+          </div>
+          <ul class="ba-list">
+            <li class="ba-item">
+              <span class="ba-icon ba-icon-red"><i class="fa-brands fa-whatsapp"></i></span>
+              <div>
+                <strong>Pedidos por WhatsApp</strong>
+                <span>Se pierden y confunden</span>
+              </div>
+            </li>
+            <li class="ba-item">
+              <span class="ba-icon ba-icon-red"><i class="fa-solid fa-table"></i></span>
+              <div>
+                <strong>Excel para todo</strong>
+                <span>Errores y horas perdidas</span>
+              </div>
+            </li>
+            <li class="ba-item">
+              <span class="ba-icon ba-icon-red"><i class="fa-solid fa-phone"></i></span>
+              <div>
+                <strong>Citas por llamada</strong>
+                <span>Horarios cruzados, cancelaciones</span>
+              </div>
+            </li>
+            <li class="ba-item">
+              <span class="ba-icon ba-icon-red"><i class="fa-solid fa-eye-slash"></i></span>
+              <div>
+                <strong>Cero visibilidad</strong>
+                <span>No sabes qué vendiste</span>
+              </div>
+            </li>
+            <li class="ba-item">
+              <span class="ba-icon ba-icon-red"><i class="fa-solid fa-clock"></i></span>
+              <div>
+                <strong>3+ horas manuales</strong>
+                <span>Tareas que se pueden automatizar</span>
+              </div>
+            </li>
+            <li class="ba-item">
+              <span class="ba-icon ba-icon-red"><i class="fa-solid fa-user-xmark"></i></span>
+              <div>
+                <strong>Clientes que se van</strong>
+                <span>40% sin compra online</span>
+              </div>
+            </li>
+          </ul>
+          <div class="ba-result ba-result-bad">
+            <i class="fa-solid fa-arrow-trend-down"></i> Tu competencia ya te está ganando
+          </div>
         </div>
 
-        <svg id="network-svg" viewBox="0 0 900 530" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;display:block;overflow:hidden"></svg>
+        <!-- DIVIDER -->
+        <div class="ba-divider">
+          <div class="ba-divider-line"></div>
+          <div class="ba-vs-badge">VS</div>
+          <div class="ba-divider-line"></div>
+        </div>
 
-        <!-- Drawer -->
-        <div class="eco-drawer glass-panel" id="eco-drawer">
-          <div class="eco-drawer-header">
-            <div>
-              <p class="eco-drawer-type" id="proj-type">Tipo de Sistema</p>
-              <h3 class="eco-drawer-name" id="proj-name">Zentra Core ERP</h3>
-            </div>
-            <div class="eco-drawer-metric">
-              <span class="eco-metric-val" id="proj-metric">–</span>
-              <span class="eco-metric-label" id="proj-metric-label">Impacto</span>
-            </div>
+        <!-- DESPUÉS -->
+        <div class="ba-panel ba-after">
+          <div class="ba-panel-header">
+            <span class="ba-badge ba-badge-blue">🚀 Con JJ TECH</span>
           </div>
-          <p class="eco-drawer-desc" id="proj-desc">Selecciona un nodo para ver detalles del sistema.</p>
-          <div class="eco-drawer-actions">
-            <button id="btn-open-demo" class="btn btn-primary btn-sm">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver sistema en vivo
-            </button>
+          <ul class="ba-list">
+            <li class="ba-item">
+              <span class="ba-icon ba-icon-blue"><i class="fa-solid fa-cart-shopping"></i></span>
+              <div>
+                <strong>Pedidos 24/7</strong>
+                <span>Vende mientras duermes</span>
+              </div>
+            </li>
+            <li class="ba-item">
+              <span class="ba-icon ba-icon-blue"><i class="fa-solid fa-boxes-stacked"></i></span>
+              <div>
+                <strong>Inventario en vivo</strong>
+                <span>Stock y alertas automáticas</span>
+              </div>
+            </li>
+            <li class="ba-item">
+              <span class="ba-icon ba-icon-blue"><i class="fa-solid fa-calendar-check"></i></span>
+              <div>
+                <strong>Agenda online</strong>
+                <span>Clientes reservan solos</span>
+              </div>
+            </li>
+            <li class="ba-item">
+              <span class="ba-icon ba-icon-blue"><i class="fa-solid fa-chart-line"></i></span>
+              <div>
+                <strong>Dashboard en vivo</strong>
+                <span>Todo visible, en tiempo real</span>
+              </div>
+            </li>
+            <li class="ba-item">
+              <span class="ba-icon ba-icon-blue"><i class="fa-solid fa-robot"></i></span>
+              <div>
+                <strong>Todo automatizado</strong>
+                <span>Facturas, cobros, reportes</span>
+              </div>
+            </li>
+            <li class="ba-item">
+              <span class="ba-icon ba-icon-blue"><i class="fa-solid fa-heart"></i></span>
+              <div>
+                <strong>Clientes fieles</strong>
+                <span>Más ventas recurrentes</span>
+              </div>
+            </li>
+          </ul>
+          <div class="ba-result ba-result-good">
+            <i class="fa-solid fa-arrow-trend-up"></i> Más ventas, menos trabajo
           </div>
         </div>
+
+      </div>
+
+      <div class="ba-cta">
+        <a href="https://wa.me/573117100880?text=Hola%20JJ%20TECH!%20Quiero%20dejar%20de%20operar%20manualmente%20y%20digitalizar%20mi%20negocio" target="_blank" rel="noopener noreferrer" class="btn btn-hero-primary">
+          <i class="fa-brands fa-whatsapp"></i> Quiero pasar al lado derecho →
+        </a>
+        <p class="ba-cta-note">Primera consulta gratis · Respuesta en menos de 1 hora</p>
       </div>
     </section>
 
@@ -458,30 +556,72 @@
         <p class="section-eyebrow">Nuestro proceso</p>
         <h2 class="section-title">De la idea al producto<br><span class="gradient-text">en tiempo récord.</span></h2>
       </div>
-      <div class="process-steps">
-        <div class="process-step">
-          <div class="step-num">01</div>
+
+      <div class="process-grid">
+
+        <div class="process-card glass-panel pc-1">
+          <div class="pc-top">
+            <div class="pc-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+            <span class="pc-num">01</span>
+          </div>
+          <div class="pc-time-badge"><i class="fa-solid fa-clock"></i> Día 1 · 30 min</div>
           <h4>Diagnóstico</h4>
-          <p>Entendemos tu negocio, tus procesos y dónde están las fugas de dinero y tiempo.</p>
+          <p>Entendemos tu negocio y encontramos exactamente dónde se escapa el dinero.</p>
+          <ul class="pc-checks">
+            <li><i class="fa-solid fa-check"></i> Análisis de procesos</li>
+            <li><i class="fa-solid fa-check"></i> Identificamos las pérdidas</li>
+            <li><i class="fa-solid fa-check"></i> 100% gratis</li>
+          </ul>
+          <div class="pc-connector"><i class="fa-solid fa-arrow-right"></i></div>
         </div>
-        <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-        <div class="process-step">
-          <div class="step-num">02</div>
-          <h4>Diseño & Propuesta</h4>
-          <p>Diseñamos la arquitectura del sistema y te presentamos un plan claro con tiempos y costos.</p>
+
+        <div class="process-card glass-panel pc-2">
+          <div class="pc-top">
+            <div class="pc-icon"><i class="fa-solid fa-pencil-ruler"></i></div>
+            <span class="pc-num">02</span>
+          </div>
+          <div class="pc-time-badge"><i class="fa-solid fa-clock"></i> Día 2–3</div>
+          <h4>Propuesta clara</h4>
+          <p>Un plan real: qué construimos, en cuánto tiempo y a qué costo. Sin letra pequeña.</p>
+          <ul class="pc-checks">
+            <li><i class="fa-solid fa-check"></i> Arquitectura del sistema</li>
+            <li><i class="fa-solid fa-check"></i> Tiempos y costos definidos</li>
+            <li><i class="fa-solid fa-check"></i> Sin sorpresas</li>
+          </ul>
+          <div class="pc-connector"><i class="fa-solid fa-arrow-right"></i></div>
         </div>
-        <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-        <div class="process-step">
-          <div class="step-num">03</div>
-          <h4>Desarrollo Ágil</h4>
-          <p>Construimos en sprints cortos con entregas visibles. Tú ves el avance en tiempo real.</p>
+
+        <div class="process-card glass-panel pc-3">
+          <div class="pc-top">
+            <div class="pc-icon"><i class="fa-solid fa-code"></i></div>
+            <span class="pc-num">03</span>
+          </div>
+          <div class="pc-time-badge"><i class="fa-solid fa-clock"></i> Semana 1–2</div>
+          <h4>Desarrollo en vivo</h4>
+          <p>Construimos rápido. Cada 2–3 días tienes algo nuevo para ver y aprobar.</p>
+          <ul class="pc-checks">
+            <li><i class="fa-solid fa-check"></i> Entregas parciales visibles</li>
+            <li><i class="fa-solid fa-check"></i> Tú apruebas cada paso</li>
+            <li><i class="fa-solid fa-check"></i> Cambios sin costo extra</li>
+          </ul>
+          <div class="pc-connector"><i class="fa-solid fa-arrow-right"></i></div>
         </div>
-        <div class="process-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-        <div class="process-step">
-          <div class="step-num">04</div>
-          <h4>Lanzamiento & Soporte</h4>
-          <p>Desplegamos en producción y te acompañamos con soporte continuo para que nunca pares.</p>
+
+        <div class="process-card glass-panel pc-4">
+          <div class="pc-top">
+            <div class="pc-icon"><i class="fa-solid fa-rocket"></i></div>
+            <span class="pc-num">04</span>
+          </div>
+          <div class="pc-time-badge pc-badge-live"><span class="pulse-dot"></span> Semana 3 · En vivo</div>
+          <h4>Lanzamiento 🚀</h4>
+          <p>Tu sistema está operando y generando resultados desde el primer día.</p>
+          <ul class="pc-checks">
+            <li><i class="fa-solid fa-check"></i> Producción garantizada</li>
+            <li><i class="fa-solid fa-check"></i> Capacitación incluida</li>
+            <li><i class="fa-solid fa-check"></i> Soporte continuo</li>
+          </ul>
         </div>
+
       </div>
     </section>
 
@@ -576,6 +716,75 @@
       </div>
     </section>
 
+    <!-- ── TIMELINE "EN CUÁNTO TIEMPO" ── -->
+    <section class="timeline-section">
+      <div class="section-header">
+        <p class="section-eyebrow">Sin complicaciones</p>
+        <h2 class="section-title">Tu negocio digitalizado<br><span class="gradient-text">en 3 semanas.</span></h2>
+        <p class="section-desc">Sabemos que el tiempo vale. Por eso trabajamos rápido, sin vueltas y con resultados visibles desde el día uno.</p>
+      </div>
+      <div class="timeline-track">
+
+        <div class="timeline-item">
+          <div class="timeline-dot tl-dot-1">
+            <i class="fa-solid fa-comments"></i>
+          </div>
+          <div class="timeline-connector"></div>
+          <div class="timeline-card glass-panel">
+            <span class="timeline-day">Día 1</span>
+            <h4>Llamada de diagnóstico</h4>
+            <p>30 minutos. Entendemos tu negocio, tus problemas y lo que necesitas. Sin costo, sin compromiso.</p>
+            <span class="timeline-tag tl-tag-green">Gratis</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot tl-dot-2">
+            <i class="fa-solid fa-pencil-ruler"></i>
+          </div>
+          <div class="timeline-connector"></div>
+          <div class="timeline-card glass-panel">
+            <span class="timeline-day">Día 2–3</span>
+            <h4>Propuesta lista</h4>
+            <p>Recibes un plan claro: qué construimos, en cuánto tiempo y a qué costo. Sin letra pequeña.</p>
+            <span class="timeline-tag tl-tag-blue">Diseño</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot tl-dot-3">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <div class="timeline-connector"></div>
+          <div class="timeline-card glass-panel">
+            <span class="timeline-day">Semana 1–2</span>
+            <h4>Ves el avance en vivo</h4>
+            <p>Construimos en sprints. Cada 2–3 días tienes algo nuevo para revisar y aprobar. Tú mandas.</p>
+            <span class="timeline-tag tl-tag-blue">Desarrollo</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot tl-dot-4">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+          <div class="timeline-connector tl-last"></div>
+          <div class="timeline-card glass-panel tl-card-glow">
+            <span class="timeline-day">Semana 3</span>
+            <h4>Tu sistema está vivo 🚀</h4>
+            <p>Lanzamiento en producción. Tu negocio vende, agenda o gestiona solo desde el primer día.</p>
+            <span class="timeline-tag tl-tag-green">En vivo</span>
+          </div>
+        </div>
+
+      </div>
+      <div class="timeline-cta">
+        <a href="https://wa.me/573117100880?text=Hola%20JJ%20TECH!%20Quiero%20empezar%20hoy" target="_blank" rel="noopener noreferrer" class="btn btn-hero-primary">
+          <i class="fa-brands fa-whatsapp"></i> Empezar hoy — Día 1 es gratis
+        </a>
+      </div>
+    </section>
+
     <!-- ── FINAL CTA ── -->
     <section class="final-cta-section">
       <div class="final-cta-glow"></div>
@@ -627,7 +836,7 @@
     </div>
   </div>
 
-  <script src="scripts/main.js?v=20260714b"></script>
+  <script src="scripts/main.js?v=20260714c"></script>
 
   <!-- ── WHATSAPP FLOTANTE ── -->
   <a href="https://wa.me/573117100880?text=Hola%20JJ%20TECH!%20Quiero%20hablar%20sobre%20mi%20proyecto" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="Contactar por WhatsApp">
