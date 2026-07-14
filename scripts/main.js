@@ -371,50 +371,24 @@ function closeDemo() {
 window.openDemo = openDemo;
 window.closeDemo = closeDemo;
 
-/* ── Offer Popup (chat-style, aparece a los 8s) ── */
+/* ── Offer Bubble (nube siempre visible) ── */
 (function () {
   const popup = document.getElementById('offer-popup');
   const closeBtn = document.getElementById('offer-popup-close');
   if (!popup) return;
 
-  // Don't show if user already closed it in this session
-  if (sessionStorage.getItem('jjtech_popup_closed')) return;
-
-  // Appear after 4 seconds, or on first scroll — whichever comes first
-  let shown = false;
-  function showPopup() {
-    if (shown) return;
-    shown = true;
-    popup.classList.add('show');
-    window.removeEventListener('scroll', onScroll);
-  }
-
-  const showTimeout = setTimeout(showPopup, 4000);
-
-  function onScroll() {
-    if (window.scrollY > 300) showPopup();
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-
+  // Always visible — close only hides for current page session
   closeBtn?.addEventListener('click', () => {
-    popup.classList.remove('show');
     popup.classList.add('hide');
-    sessionStorage.setItem('jjtech_popup_closed', '1');
-    clearTimeout(showTimeout);
-    window.removeEventListener('scroll', onScroll);
   });
 
-  // Also hide when clicking the CTA (they're going to WA)
   popup.querySelector('.offer-popup-btn')?.addEventListener('click', () => {
-    popup.classList.remove('show');
     popup.classList.add('hide');
-    sessionStorage.setItem('jjtech_popup_closed', '1');
-    window.removeEventListener('scroll', onScroll);
   });
 
-  // Timer countdown — persists 48h
+  // Countdown timer — 48h from first visit
   let endTime = localStorage.getItem('jjtech_offer_end');
-  if (!endTime) {
+  if (!endTime || parseInt(endTime) < Date.now()) {
     endTime = (Date.now() + 48 * 60 * 60 * 1000).toString();
     localStorage.setItem('jjtech_offer_end', endTime);
   }
@@ -434,7 +408,6 @@ window.closeDemo = closeDemo;
     if (ts) ts.textContent = pad(s);
     if (remaining === 0) clearInterval(timerInterval);
   }
-
   updateTimer();
   const timerInterval = setInterval(updateTimer, 1000);
 })();
